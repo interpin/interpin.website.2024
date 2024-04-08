@@ -118,7 +118,7 @@
         "max": 2500,
         "min": 900,
         "suffix": "px",
-        "default": 1240
+        "default": 1580
       }
     ]
   },
@@ -1580,51 +1580,6 @@
       {
         "label": "Body",
         "name": "table_body",
-        "type": "group",
-        "children": [
-          {
-            "label": "Text",
-            "name": "text",
-            "type": "group",
-            "children": [
-              {
-                "label": "Color",
-                "name": "color",
-                "type": "color",
-                "visibility": {
-                  "hidden_subfields": {
-                    "opacity": true
-                  }
-                },
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.global_fonts.primary.color"
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "label": "Background",
-            "name": "background",
-            "type": "group",
-            "children": [
-              {
-                "label": "Color",
-                "name": "color",
-                "type": "color",
-                "default": {
-                  "color": "#FFFFFF",
-                  "opacity": 100
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Footer",
-        "name": "footer",
         "type": "group",
         "children": [
           {
