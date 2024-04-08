@@ -1,0 +1,20 @@
+{% import "../partials/masonry.html" as MasonryPartial %}
+{% set wrapper_class = module.Tiles.height_options %}
+
+<div class="masonry-wrapper row-fluid-wrapper {{ wrapper_class }}">
+  <div class="row-fluid">
+    
+    {% for item in module.tiles %}
+      {% if loop.index == module.large_tile %}
+        <div class="span6 tile--outer">
+          {{ MasonryPartial.render_tile(item, 'tile_x0_5_width') }}
+        </div>
+      {% else %}
+        <div class="span3 tile--outer">
+          {{ MasonryPartial.render_tile(item, 'tile_x1_width') }}
+        </div>
+      {% endif %}
+    {% endfor %}
+    
+  </div>
+</div>

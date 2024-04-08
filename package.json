@@ -1,0 +1,17 @@
+{
+  "name": "interpin.website.2023",
+  "version": "1.0.0",
+  "description": "The hubspot website for interpin",
+  "main": "index.js",
+  "scripts": {
+    "watch": "hs watch interpin-2024-theme interpin-2024-theme",
+    "fetch-modules": "hs fetch interpin-2024-theme/modules interpin-2024-theme/modules --overwrite",
+    "fetch-sections": "hs fetch interpin-2024-theme/sections interpin-2024-theme/sections --overwrite",
+    "fetch-all": "hs fetch interpin-2024-theme interpin-2024-theme --overwrite"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hubspot/cli": "^5.0.2"
+  }
+}

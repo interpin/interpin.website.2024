@@ -1,0 +1,425 @@
+[ {
+  "id" : "7dd156d5-7f5f-0a6b-33cc-ed4d123130da",
+  "name" : "tiles",
+  "display_width" : null,
+  "label" : "Tiles",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 4,
+    "max" : 4,
+    "sorting_label_field" : "cf776082-7f1c-6285-dbf7-ec1547c4a2e7",
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "cf776082-7f1c-6285-dbf7-ec1547c4a2e7",
+    "name" : "richtext",
+    "display_width" : null,
+    "label" : "Rich Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla.</span></p>"
+  }, {
+    "id" : "69712188-1c6c-97b4-f108-ffaf6b935ce9",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#1B1D36",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "f7abaccc-f5d3-c43e-a256-501ca5981ecc",
+    "name" : "background_image",
+    "display_width" : null,
+    "label" : "Background Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "46b8ed6f-f5eb-6dda-b9e2-479388ad2e21",
+    "name" : "button_or_link",
+    "display_width" : null,
+    "label" : "Button or Link",
+    "inline_help_text" : "Place a link of the entire tile, or render a button at the bottom of the tile",
+    "required" : false,
+    "locked" : false,
+    "display" : "radio",
+    "choices" : [ [ "none", "None" ], [ "link", "Link over whole tile" ], [ "button", "Button at bottom of tile" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "none"
+  }, {
+    "id" : "c445667a-2e70-769e-f49c-bb8a77dd205f",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "help_text" : "Add a link for the entire tile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "tiles.button_or_link",
+      "controlling_value_regex" : "link",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "1935ee02-f0b0-9f30-9231-006016dbbe65",
+    "name" : "buttons_alignment",
+    "display_width" : null,
+    "label" : "Buttons Alignment",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "tiles.button_or_link",
+      "controlling_value_regex" : "button",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "left"
+  }, {
+    "id" : "99c9b90b-9c9b-f301-219d-d7655e2b0713",
+    "name" : "buttons",
+    "display_width" : null,
+    "label" : "Buttons",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 2,
+      "sorting_label_field" : "1c3a540c-0420-3662-fa7b-61fd13a1c624",
+      "default" : 1
+    },
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "tiles.button_or_link",
+      "controlling_value_regex" : "button",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "1c3a540c-0420-3662-fa7b-61fd13a1c624",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tiles.button_or_link",
+        "controlling_value_regex" : "button",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    }, {
+      "id" : "bd3097e7-9f70-3e70-6a09-e11d75140574",
+      "name" : "button_color_style",
+      "display_width" : null,
+      "label" : "Button Color Style",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "green", "Green" ], [ "white", "White" ], [ "lavendar", "Lavendar" ], [ "blue", "Blue" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "green"
+    }, {
+      "id" : "8cfbfbe5-42d1-dfa7-a191-cdbf49c1b1a8",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "button_color_style" : "green",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "id" : "02b3d6db-81b8-2e46-6cbd-0aef4090c018",
+    "name" : "visibility_breakpoints",
+    "display_width" : null,
+    "label" : "Visibility Breakpoints",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "69091014-8158-493f-f0e3-c1fb92c106c9",
+      "name" : "hide_on_mobile",
+      "display_width" : null,
+      "label" : "Hide on Mobile (< 768px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "9b3c245a-dfdf-019d-8c9d-1f55973179c2",
+      "name" : "hide_on_tablets",
+      "display_width" : null,
+      "label" : "Hide on Tablet (768px < 1200px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "d083ed75-d6f0-a9c1-b17e-879dd37ad453",
+      "name" : "hide_on_large",
+      "display_width" : null,
+      "label" : "Hide on Large (1200px +)",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "hide_on_mobile" : false,
+      "hide_on_tablets" : false,
+      "hide_on_large" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "richtext" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla.</span></p>",
+    "background_color" : {
+      "color" : "#1B1D36",
+      "opacity" : 100
+    },
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "button_or_link" : "none",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "buttons_alignment" : "left",
+    "buttons" : [ {
+      "button_color_style" : "green",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "richtext" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla.</span></p>",
+    "background_color" : {
+      "color" : "#1B1D36",
+      "opacity" : 100
+    },
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "button_or_link" : "none",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "buttons_alignment" : "left",
+    "buttons" : [ {
+      "button_color_style" : "green",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "richtext" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla.</span></p>",
+    "background_color" : {
+      "color" : "#1B1D36",
+      "opacity" : 100
+    },
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "button_or_link" : "none",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "buttons_alignment" : "left",
+    "buttons" : [ {
+      "button_color_style" : "green",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "richtext" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla.</span></p>",
+    "background_color" : {
+      "color" : "#1B1D36",
+      "opacity" : 100
+    },
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "button_or_link" : "none",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "buttons_alignment" : "left",
+    "buttons" : [ {
+      "button_color_style" : "green",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ]
+}, {
+  "id" : "29b89185-b68a-6bf0-ec9a-63860d2c8a4b",
+  "name" : "Tiles",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c0713627-db38-4a84-cd65-f146b7a331e0",
+    "name" : "height_options",
+    "display_width" : null,
+    "label" : "Height Options",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "fixed-height", "Fixed Height (1/4 row width)" ], [ "auto-height", "Fit content of tallest tile on row" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "fixed-height"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "height_options" : "fixed-height"
+  }
+} ]

@@ -1,0 +1,151 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+.masonry-wrapper{
+}
+
+.tile {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+
+.tile::before {
+  content: '';
+  display: block;  
+}
+
+.tile--outer{
+}
+
+.tile-inner{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2.13vw;    
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.masonry-wrapper .span9 > .tile, 
+.tile_x0_3_width{
+  padding-top: calc(33.333333% - (var(--column-gap) * 0.6666666));
+}
+
+.masonry-wrapper .span6 > .tile, 
+.tile_x0_5_width{
+  padding-top: calc(50% - (var(--column-gap) * 0.5));
+}
+
+.masonry-wrapper .span4 > .tile {
+  padding-top: 72.75%;
+}
+
+.masonry-wrapper .span3 > .tile, 
+.tile_x1_width{
+  padding-top: 100%;
+}
+
+.tile_x2_width::before {
+  padding-top: calc(200% + var(--column-gap));
+}
+
+.tile_x3_width{
+  padding-top: calc(300% + (var(--column-gap) * 2)); 
+} 
+
+.tile p {
+
+}
+
+.tile-buttons {
+  padding: 2rem 0 0 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.auto-height .tile {
+  padding-top: 0 !important;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; /* Aligns children vertically */
+}
+
+.auto-height .tile-inner{
+  position: relative;
+  overflow: auto;
+  flex-grow: 1; 
+}
+
+
+/*** Removing margin from last items ***/
+.tile-inner .hs_cos_wrapper_type_inline_rich_text > *:last-child {
+  margin-bottom: 0;
+}
+
+
+/*** Breakpoints ***/
+
+/* override befault col size on other devices so we can colapse */
+@media (max-width: 767px){
+  .masonry-wrapper .sm-hide{
+    display: none;
+  }
+  /* on much smaller screens we can remove the bottom margin from the last tile of span3s
+  .dnd-column > .dnd-row:last-child .span3 .tile-inner:last-child{
+    margin-bottom: 0;
+  } */
+  
+}
+@media (min-width: 768px) and (max-width: 1200px){
+  .masonry-wrapper .md-hide{
+    display: none;
+  }
+  .masonry-wrapper .row-fluid {
+    flex-wrap: wrap;
+  }
+  .masonry-wrapper .row-fluid .span3 {
+    width: calc(var(--column-width-multiplier)*1%*6 - var(--column-gap)*var(--column-width-multiplier)*6/100);
+  }
+  .masonry-wrapper .row-fluid .span9,
+  .masonry-wrapper .row-fluid .span6,
+  .masonry-wrapper .row-fluid .span4 {
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 1200px){
+  /* on smaller screens we can remove the bottom margin from the last tile in the last row of these sized tiles
+  .dnd-column > .dnd-row:last-child .span9 .tile-inner:last-child,
+  .dnd-column > .dnd-row:last-child .span6 .tile-inner:last-child,
+  .dnd-column > .dnd-row:last-child .span4 .tile-inner:last-child{
+    margin-bottom: 0;
+  } */
+}
+
+@media (min-width: 1201px){
+  .masonry-wrapper .lg-hide{
+    display: none;
+  }
+  
+  /* on large screens we can safely remove the bottom margin from entire last row of tiles
+  .dnd-column > .dnd-row:last-child .tile-inner{
+    margin-bottom: 0;
+  } */
+}

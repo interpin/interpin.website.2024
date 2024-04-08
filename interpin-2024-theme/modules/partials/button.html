@@ -1,0 +1,14 @@
+<!--
+  templateType: "none"
+  isAvailableForNewContent: false
+-->
+{% macro render_button(button) %}
+{% if button.show %}
+      {% if button.link.open_in_new_tab == "true" %}
+        {% set targetAttr="target='_blank'" %}
+      {% endif %}
+      <a class="button" href="{{ button.link.url.href }}" {{ targetAttr }} rel="{{ button.rel }}">
+        {{ button.text }}
+      </a>
+  {% endif %}
+{% endmacro %}

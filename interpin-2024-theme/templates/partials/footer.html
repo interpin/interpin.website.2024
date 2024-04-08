@@ -1,0 +1,31 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+<footer class="footer">
+  {% dnd_area "footer"
+    label="Footer",
+    class="footer__container content-wrapper"
+  %}
+
+    {# Social follow and copyright #}
+
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row
+          margin={
+            "top": 12,
+            "bottom": 12
+          }
+        %}
+          {% dnd_module
+            path="@hubspot/rich_text",
+            html='<div style="text-align: center; font-size: 0.7rem;"><span>© {{ year }} All rights reserved.</span></div>'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</footer>

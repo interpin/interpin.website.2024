@@ -1,0 +1,110 @@
+<!--
+  templateType: "none"
+  isAvailableForNewContent: false
+-->
+{% macro render_tile(tile, height_class) %}
+
+  {% if height_class and tile.height_class %}
+      {% set height_class = tile.height_class %}
+  {% endif %}
+
+  {% if tile.background_image %}
+    {% set background_image_style = "background-image: url(" ~ tile.background_image.src ~ ");" %}
+  {% endif %}
+
+  {% if tile.background_color.color %}
+    {% set background_color_style = "background-color: " ~ tile.background_color.color ~ ";" %}
+  {% endif %}
+
+  {% if tile.default_text_color.color %}
+    {% set default_text_color_style = "color: " ~ tile.default_text_color.color ~ ";" %}
+  {% endif %}
+
+  {% set image_alignment_style = tile.image_alignment %}
+  {% if image_alignment_style %}
+    {% set image_alignment_style = image_alignment_style|replace("middle", "center") %}
+    {% set image_alignment_style = image_alignment_style|replace("_", " ") %}
+    {% set image_alignment_style = "background-position: " ~ image_alignment_style ~ ";" %}
+  {% endif %}
+
+{% set padding = module.Tiles.spacing_field.padding %}
+{% set padding_style = 
+  "padding-top: " ~ padding.top.value ~ padding.top.units ~ ";" ~
+  "padding-bottom: " ~ padding.bottom.value ~ padding.bottom.units ~ ";" ~
+  "padding-right: " ~ padding.right.value ~ padding.right.units ~ ";" ~
+  "padding-left: " ~ padding.left.value ~ padding.left.units ~ ";"
+%}
+
+  {% set image_size_style = tile.image_size %}
+  {% if image_size_style %}
+    {% set image_size_style = "background-size: " ~ image_size_style ~ ";" %}
+  {% endif %}
+
+  {% if tile.button_or_link == 'link' %}
+
+    {% set link_href = tile.link.url.href %}
+    {% if tile.link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set link_href = "mailto:" + link_href %}
+    {% endif %}
+
+  {% endif %}
+
+  {% if tile.visibility_breakpoints %}
+
+    {% set visible_classes = '' %}
+
+    {% if tile.visibility_breakpoints.hide_on_mobile %}
+      {% set visible_classes = visible_classes ~ ' sm-hide' %}
+    {% endif %}
+    {% if tile.visibility_breakpoints.hide_on_tablets %}
+      {% set visible_classes = visible_classes ~ ' md-hide' %}
+    {% endif %}
+    {% if tile.visibility_breakpoints.hide_on_large %}
+      {% set visible_classes = visible_classes ~ ' lg-hide' %}
+    {% endif %}
+
+  {% endif %}
+
+  {% if link_href %}
+
+    <a href="{{ link_href }}"	{% if tile.link.open_in_new_tab %}target="_blank"{% endif %}	{% if tile.link.rel %}rel="{{ tile.link.rel }}"{% endif %} class="tile-anchor" 
+       class="tile {{ height_class }}{{ visible_classes }}">
+      
+    {% set closing_tag = "</a>" %}
+      
+  {% else %}
+      
+    <div class="tile {{ height_class }}{{ visible_classes }}">
+      
+    {% set closing_tag = "</div>" %}
+      
+  {% endif %}
+      
+    <div class="tile-inner" style="{{ padding_style }}{{ background_image_style }}{{ background_color_style }}{{ default_text_color_style }}{{image_alignment_style}}{{ image_size_style }}">
+      
+      {% inline_rich_text field="richtext" value="{{ tile.richtext }}" %}
+      
+      {% if tile.button_or_link == 'button' %}
+      
+        <div class="tile-buttons" style="justify-content: {{ tile.buttons_alignment }};">
+
+          {% for button in tile.buttons %}
+
+              {% if button.button_link.open_in_new_tab == "true" %}
+              {% set targetAttr="target='_blank'" %}
+              {% endif %}
+              <a class="button button__{{button.button_color_style}}" href="{{ button.button_link.url.href }}" {{ targetAttr }} rel="{{ button.button_link.rel }}">
+                {{ button.button_text }}
+              </a>
+
+          {% endfor %}
+            
+        </div>
+      
+      {% endif %}
+
+    </div>
+      
+  {{ closing_tag|safe }}
+
+{% endmacro %}

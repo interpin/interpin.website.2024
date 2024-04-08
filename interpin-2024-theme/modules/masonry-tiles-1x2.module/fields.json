@@ -1,0 +1,373 @@
+[ {
+  "id" : "e47466e4-c460-a482-3e76-91d238b5bc43",
+  "name" : "Tiles",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "e10560ad-25aa-b54d-aa29-881d7117f4c8",
+    "name" : "height_options",
+    "display_width" : null,
+    "label" : "Height Options",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "fixed-height", "Fixed Height (1/4 row width)" ], [ "auto-height", "Fit content of tallest tile on row" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "fixed-height"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "height_options" : "fixed-height"
+  }
+}, {
+  "id" : "7dd156d5-7f5f-0a6b-33cc-ed4d123130da",
+  "name" : "tiles",
+  "display_width" : null,
+  "label" : "Tiles",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 2,
+    "max" : 2,
+    "sorting_label_field" : "cf776082-7f1c-6285-dbf7-ec1547c4a2e7",
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "135c027d-261d-2bb5-4a3d-f887ebb283b8",
+    "name" : "default_text_color",
+    "display_width" : null,
+    "label" : "Default Text Color",
+    "help_text" : "This is the color the text will be if you don't override it in the Rich Text Editor.",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "cf776082-7f1c-6285-dbf7-ec1547c4a2e7",
+    "name" : "richtext",
+    "display_width" : null,
+    "label" : "Rich Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla. Integer cursus placerat ex, euismod ornare purus pharetra ut.&nbsp;</span></p>"
+  }, {
+    "id" : "69712188-1c6c-97b4-f108-ffaf6b935ce9",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#1B1D36",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "f7abaccc-f5d3-c43e-a256-501ca5981ecc",
+    "name" : "background_image",
+    "display_width" : null,
+    "label" : "Background Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "9241878c-37be-24a2-7cd0-d2f0ea87aca3",
+    "name" : "button_or_link",
+    "display_width" : null,
+    "label" : "Button or Link",
+    "help_text" : "",
+    "inline_help_text" : "Place a link of the entire tile, or render a button at the bottom of the tile",
+    "required" : false,
+    "locked" : false,
+    "display" : "radio",
+    "choices" : [ [ "none1", "None" ], [ "link", "Link over whole tile" ], [ "button", "Button at bottom of tile" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "none1"
+  }, {
+    "id" : "c445667a-2e70-769e-f49c-bb8a77dd205f",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "help_text" : "Add a link for the entire tile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "tiles.button_or_link",
+      "controlling_value_regex" : "link",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "d1ef7292-ccab-6c1f-ceab-b28a7f7d89f1",
+    "name" : "buttons_alignment",
+    "display_width" : null,
+    "label" : "Buttons Alignment",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "tiles.button_or_link",
+      "controlling_value_regex" : "button",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "left"
+  }, {
+    "id" : "b7b39af4-3449-fa18-e2ac-d8f339dcc9a1",
+    "name" : "buttons",
+    "display_width" : null,
+    "label" : "Buttons",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 2,
+      "sorting_label_field" : "4eabd9f2-482a-6776-1f06-b0dd158f7419",
+      "default" : 1
+    },
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "tiles.button_or_link",
+      "controlling_value_regex" : "button",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "4eabd9f2-482a-6776-1f06-b0dd158f7419",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : ""
+    }, {
+      "id" : "b8c6bbfd-6604-2a28-9bfe-49413ef438e5",
+      "name" : "button_color_style",
+      "display_width" : null,
+      "label" : "Button Color Style",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "green", "Green" ], [ "white", "White" ], [ "lavendar", "Lavendar" ], [ "blue", "Blue" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "green"
+    }, {
+      "id" : "8b24a857-daf9-ded2-427a-c3b13ca2d73d",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "button_text" : "",
+      "button_color_style" : "green",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "id" : "02b3d6db-81b8-2e46-6cbd-0aef4090c018",
+    "name" : "visibility_breakpoints",
+    "display_width" : null,
+    "label" : "Visibility Breakpoints",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "69091014-8158-493f-f0e3-c1fb92c106c9",
+      "name" : "hide_on_mobile",
+      "display_width" : null,
+      "label" : "Hide on Mobile (< 768px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "9b3c245a-dfdf-019d-8c9d-1f55973179c2",
+      "name" : "hide_on_tablets",
+      "display_width" : null,
+      "label" : "Hide on Tablet (768px < 1200px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "d083ed75-d6f0-a9c1-b17e-879dd37ad453",
+      "name" : "hide_on_large",
+      "display_width" : null,
+      "label" : "Hide on Large (1200px +)",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "hide_on_mobile" : false,
+      "hide_on_tablets" : false,
+      "hide_on_large" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "default_text_color" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    },
+    "richtext" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla. Integer cursus placerat ex, euismod ornare purus pharetra ut.&nbsp;</span></p>",
+    "background_color" : {
+      "color" : "#1B1D36",
+      "opacity" : 100
+    },
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "button_or_link" : "none1",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "buttons_alignment" : "left",
+    "buttons" : [ {
+      "button_text" : "",
+      "button_color_style" : "green",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "default_text_color" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    },
+    "richtext" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla. Integer cursus placerat ex, euismod ornare purus pharetra ut.&nbsp;</span></p>",
+    "background_color" : {
+      "color" : "#1B1D36",
+      "opacity" : 100
+    },
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "button_or_link" : "none1",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "buttons_alignment" : "left",
+    "buttons" : [ {
+      "button_text" : "",
+      "button_color_style" : "green",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ]
+} ]
