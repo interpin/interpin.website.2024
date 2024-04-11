@@ -42,6 +42,7 @@
 {% set yellow_color = '#E6C26C' %}
 {% set grey_color = '#4E5D63' %}
 {% set lightgrey_color = '#DEDEDE' %}
+{% set fontgrey_color = '#7F7F80' %}
 {% set teal_color = '#7EF8F0' %}
 {% set white_color = '#FFFFFF' %}
 {% set black_color = '#000000' %}
@@ -51,24 +52,6 @@
 
 {% set primary_font = theme.global_fonts.primary %}
 {% set secondary_font = theme.global_fonts.secondary %}
-
-{% set h1_font = theme.text.h1.font %}
-{% set h1_text_transform = theme.text.h1.transform %}
-
-{% set h2_font = theme.text.h2.font %}
-{% set h2_text_transform = theme.text.h2.transform %}
-
-{% set h3_font = theme.text.h3.font %}
-{% set h3_text_transform = theme.text.h3.transform %}
-
-{% set h4_font = theme.text.h4.font %}
-{% set h4_text_transform = theme.text.h4.transform %}
-
-{% set h5_font = theme.text.h5.font %}
-{% set h5_text_transform = theme.text.h5.transform %}
-
-{% set h6_font = theme.text.h6.font %}
-{% set h6_text_transform = theme.text.h6.transform %}
 
 {% set body_font = theme.text.body_font.font %}
 
@@ -173,20 +156,24 @@
 {###########################################################################}
 
 html {
-  font-size: {{ body_font.size ~ body_font.size_unit }};
+  font-size: 18pt;
 }
 
 body {
-  {{ body_font.style }};
-  color: {{ body_font.color }};
-  font-size: {{ body_font.size ~ body_font.size_unit }};
+  font-size: 0.9rem;
+  font-family: Hanken Grotesk, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  text-decoration: none;
+  color: {{ fontgrey_color }};
   background-color: {{ black_color }};
 }
 
 /* Paragraphs */
 
 p {
-  {{ body_font.style }};
+    font-size: 0.9rem;
+    margin: 0 0 1.4rem;
 }
 
 /* Anchors */
@@ -211,57 +198,60 @@ a:active {
 
 h1,
 .h1 {
+  color: {{ white_color }};
   font-family: {{ secondary_font.font }};
   font-style: normal;
   text-decoration: none;
   text-transform: none;
   font-weight: 700;
-  font-size: 62pt;
-  line-height: 72pt;
+  font-size: 3.1rem;
+  line-height: 3.4rem;
 }
 
 h2,
 .h2 {
+  color: {{ white_color }};
   font-family: {{ secondary_font.font }};
   font-style: normal;
   text-decoration: none;
   text-transform: none;
   font-weight: 700;
-  font-size: 48pt;
-  line-height: 58pt;
+  font-size: 2.4rem;
+  line-height: 2.7rem;
 }
 
 h3,
 .h3 {
+  color: {{ white_color }};
   font-family: {{ secondary_font.font }};
   font-style: normal;
   text-decoration: none;
   text-transform: none;
   font-weight: 700;
-  font-size: 29pt;
-  line-height: 39pt;
+  font-size: 1.45rem;
+  line-height: 1.75rem;
 }
 
 h4,
 .h4 {
+  color: {{ white_color }};
   font-family: {{ primary_font.font }};
   font-style: normal;
   text-decoration: none;
   text-transform: none;
   font-weight: 300;
-  font-size: 25pt;
-  line-height: 35pt;
+  font-size: 1.25rem;
 }
 
 h5,
 .h5 {
+  color: {{ white_color }};
   font-family: {{ primary_font.font }};
   font-style: normal;
   text-decoration: none;
   text-transform: none;
   font-weight: 300;
-  font-size: 22pt;
-  line-height: 35pt;
+  font-size: 1.1rem;
 }
 
 h6,
@@ -270,15 +260,67 @@ h6,
   font-style: normal;
   text-decoration: none;
   text-transform: none;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 35pt;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 /* Blockquote */
 
 blockquote {
   border-left-color: {{ secondary_color }};
+}
+
+/* cta styles */
+
+.cta-font-light{
+  color: {{ white_color }};
+  font-size: 18px;
+  text-decoration: none;
+  font-family: Space Grotesk;
+}
+
+.cta-font-light:hover{
+  text-decoration: none;
+  color: {{ white_color }};
+  font-family: Space Grotesk;
+}
+
+.cta-font-dark{
+  color: {{ black_color }};
+  font-size: 18px;
+  text-decoration: none;
+  font-family: Space Grotesk;
+}
+
+.cta-font-dark:hover{
+  text-decoration: none;
+  color: {{ black_color }};
+  font-family: Space Grotesk;
+}
+
+/* Media breakpoints */
+
+/* Media Queries */
+
+/* Smaller desktop monitors */
+@media (max-width: 1599px) {
+  html{
+    font-size: 18pt;
+  }
+}
+
+/* Tablets and such */
+@media (max-width: 1160px) {
+  html{
+    font-size: 18pt;
+  }
+}
+
+/* Mobiles and such */
+@media (max-width: 767px) {
+  html{
+    font-size: 16pt; /* globally reduce font sizes on smaller screens */
+  }
 }
 
 {###########################################################################}
@@ -489,6 +531,8 @@ tfoot td {
 .header {
   border-bottom: {{ white_color }} 1px solid;
   padding: 24px 0;
+  z-index: 10;
+  position: relative;
 }
 
 .menu__link,
@@ -775,3 +819,24 @@ tfoot td {
   color: {{ h3_font.color }};
   font-size: {{ h3_font.size ~ h3_font.size_unit }};
 }
+
+
+{###########################################################################}
+{##########################   11. Images and graphics  ######################}
+{###########################################################################}
+
+img {
+  border: none;
+}
+
+.icon-circle{
+  border-radius: 20px;
+  background-color: {{ yellow_color }};
+  color: initial;
+  margin-right: 12px;
+  height: 40px;
+  width: 40px;
+  align-content: center;
+  text-align: center;
+  display: inline-block;
+} 

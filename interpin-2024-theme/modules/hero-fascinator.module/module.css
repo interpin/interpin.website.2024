@@ -1,6 +1,234 @@
-.hero-interactive--container .content-container{
-  
+/* Base container style */
+.hero-interactive--container
+{
+  position: relative;
+  border-bottom: #fff 1px solid;
 }
 
+/* Full screen style */
+.hero-interactive--container.full-screen{
+  min-height: 100vh;
+}
+/* .hero-interactive--container.full-screen .content-wrapper,
+.hero-interactive--container.full-screen .content-wrapper .row-fluid-wrapper,
+.hero-interactive--container.full-screen .content-wrapper .row-fluid{
+  height: 100%;
+} */
+
+
+.hero-interactive--container .content-columns{
+  align-items: stretch;
+  flex-direction: row;
+}
+
+/* Fall behind header style */
+.hero-interactive--container.behind-header{
+  margin-top: -115px;
+}
+
+/* Content Section Base Style */
+.hero-interactive--container .content-left{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero-interactive--container .content-left--inner{
+  margin-top: 116px;
+  margin-bottom: 116px;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+
+/* vertical text */
+.hero-interactive--container .vertical-text{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.hero-interactive--container .vertical-text--inner{
+  bottom: 0;
+  left: 17px;
+  padding: 28px 58px;
+  position: absolute;
+  transform: rotate(270deg);
+  transform-origin: left bottom;
+  border-top: #fff 1px solid;
+  font-weight: 400;
+}
+
+.hero-interactive--container .vertical-text .cta-font-light{
+  font-family: Hanken Grotesk, sans-serif;
+}
+/* Content on the Right (overlaying Fascinator */
+.hero-interactive--container .content-right {
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero-interactive--container a.teaser-tab {
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--column-gap) * -1);
+  width: 262px;
+  min-height: 300px;
+  background-color: #7EF8F0; /* {{ teal_color }} */
+  z-index: 12;
+  padding: 42px;
+  border-radius: 32px 32px 0 0;
+  opacity: 0.6;
+  transition: opacity 0.4s ease-in-out;
+
+  /* Text from bottom to top */
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start; /* Aligns text to the top */
+  overflow-y: auto;
+  
+  /* Text Styling */
+  color: #000;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.hero-interactive--container a.teaser-tab:hover {
+  opacity: 1;
+}
+
+.hero-interactive--container .teaser-tab--text{
+  font-family: Space Grotesk;
+}
+.hero-interactive--container .teaser-tab--icon{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  position: absolute;
+  top: 32px;
+  right :32px;
+}
+
+/* Fascinator Base Style */
 .hero-interactive--container .fascinator-container{
+  width: 50%;
+  position: absolute;
+  top: 0;
+  bottom:0;
+  right: 0;
+}
+/* Fascinator Image */
+.hero-interactive--container .fascinator-image{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.hero-interactive--container .fascinator-image img{
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* Fascinator Tablet Fallback */
+.hero-interactive--container .fascinator-container--tablet{
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom:0;
+  right: 0;
+  left: 0;
+}
+
+.hero-interactive--container .fascinator-container--tablet .fascinator-image{
+  position: relative;
+  overflow: hidden;
+}
+.hero-interactive--container .fascinator-container--tablet .fascinator-image img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+
+/* Media Queries */
+
+/* Smaller desktop monitors */
+@media (max-width: 1599px) {
+  .hero-interactive--container h1 {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+}
+
+/* Tablets and such */
+@media (max-width: 1160px) {
+  .hero-interactive--container h1 {
+  }
+  .hero-interactive--container .content-wrapper .content-columns{
+    display: block;
+  }
+  
+  .hero-interactive--container .content-left{
+    width: 100%;
+  }
+  .hero-interactive--container .content-right{
+    min-height: auto;
+    width: 100%;
+  }
+
+  .hero-interactive--container a.teaser-tab{
+    left: auto;
+    right: 0;
+    width: auto;
+    min-height: auto;
+    display: block;    
+    padding: 8px 42px;
+  }
+  .hero-interactive--container .teaser-tab--icon{
+    display: inline-block;
+    position: relative;
+    right: auto; 
+    top: auto;
+  }
+  .hero-interactive--container .teaser-tab--text{
+    font-size: 12pt;
+    display: inline-block;
+  }
+
+  .hero-interactive--container .fascinator-container{
+    display: none;
+  }
+  
+  .hero-interactive--container .fascinator-container--tablet{
+    display: block;
+  }
+
+  .hero-interactive--container .vertical-text{
+    display: none;
+  }
+
+}
+
+/* Mobiles and such */
+@media (max-width: 767px) {
+  .hero-interactive--container h1 {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+  .hero-interactive--container .content-wrapper .content-columns{
+  
+  }
+  .hero-interactive--container .content-right{
+/*     display: none */
+  }
 }

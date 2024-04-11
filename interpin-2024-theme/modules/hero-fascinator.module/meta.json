@@ -3,6 +3,11 @@
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_POST" ],
   "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
   "module_id" : 99119005637,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../css/components/_hero-fascinator.css",
+    "name" : "_hero-fascinator.css"
+  } ],
   "label" : "Hero with Fascinator ",
   "is_available_for_new_content" : true
 }

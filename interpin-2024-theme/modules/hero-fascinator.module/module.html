@@ -1,36 +1,123 @@
-<div class="hero-interactive--container">
+{% require_css %}
+  <style>
 
+  </style>
+{% end_require_css %}
+
+{# #}
+{% set container_class = '' %}
+{% if module.style.size_and_position.full_screen %}
+  {% set container_class = container_class ~ ' full-screen' %}
+{% endif %}
+{% if module.style.size_and_position.behind_header %}
+  {% set container_class = container_class ~ ' behind-header' %}
+{% endif %}
+
+<div class="hero-interactive--container {{ container_class }}">
+  <div class="fascinator-container--tablet">
+    {% if module.fascinator_tablet.type == 'image' %}
+      {# Image #}
+      {% if module.fascinator_tablet.image.src %}
+        <div class="fascinator-image">
+          {% set sizeAttrs = 'width="{{ module.fascinator_tablet.image.width|escape_attr }}" height="{{ module.fascinator_tablet.image.height|escape_attr }}"' %}
+          {% set loadingAttr = module.fascinator_tablet.image.loading != 'disabled' ? 'loading="{{ module.fascinator_tablet.image.loading|escape_attr }}"' : '' %}
+          <img src="{{ module.fascinator_tablet.image.src|escape_url }}" alt="{{ module.fascinator_tablet.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        </div>
+      {% endif %}    
+    {# Image End #}
+    
+    {% elif module.fascinator_tablet.type == 'video' %}
+    ToDo: Looping Video 
+    {% elif module.fascinator_tablet.type == 'iframe' %}
+    ToDo: iFrame 
+    {% elif module.fascinator_tablet.type == 'svg' %}
+    ToDo: SVG 
+    {% elif module.fascinator_tablet.type == 'js_injected' %}
+    TODO: JS Injected Content
+    {% endif %}
+  </div>
+  
   <div class="content-wrapper">
     <div class="row-fluid-wrapper">
-      <div class="row-fluid">
+      <div class="row-fluid content-columns">
 
-        <div class="content-left span6">
-          <h1>
-            Strategic Digital Development
-          </h1>
-          <h2>
-            Specialising in HubSpot, Umbraco, .NET and Microsoft Dynamics
-          </h2>
-          <div class="cta-container">
-            <i class="interpin-i-circle-arrow-right"></i>
-            <span>DISCOVER MORE ABOUT INTERPIN</span>
+        <div class="span6 content-left">
+          <div class="span9 content-left--inner">
+          {% inline_rich_text 
+            field="content.header_content"
+            value="{{ module.content.header_content }}" 
+          %}
+            <div class="cta-container">
+              {% set cta_href = module.content.link_field.url.href %}
+              {% if module.content.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set cta_href = "mailto:" + cta_href %}
+              {% endif %}
+              {% if cta_href %}
+                <a href="{{ href|escape_url }}" class="cta-font-light"
+                   {% if module.content.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if module.content.link_field.rel %}rel="{{ module.content.link_field.rel|escape_attr }}"{% endif %}
+                   >
+                  <span class="icon-circle">
+                    <i class="fa-solid fa-arrow-right-long"></i>              
+                  </span>
+                  {{ module.content.link_text }}
+                </a>
+              {% endif %}
+            </div>
+
           </div>
-          <div class="vertical">
-            ELEVATING BUSINESS
+          <div class="vertical-text">
+            <div class="vertical-text--inner">
+              <span class="cta-font-light">
+                {{ module.content.vertical_text }}
+              </span>
+            </div>
           </div>
         </div>
         <div class="content-right span6">
-          <i class="interpin-i-arrow-right"></i>
-          <div class="teaser-tab">
-            Wanna see something fun? 
-          </div>
+
+          {% set teaser_href = module.fascinator.teaser_tab_link.url.href %}
+          {% if module.fascinator.teaser_tab_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set teaser_href = "mailto:" + cta_href %}
+          {% endif %}
+          {% if teaser_href %} 
+            <a href="{{ teaser_href|escape_url }}"  class="teaser-tab"
+             {% if module.fascinator.teaser_tab_link.rel %}rel="{{ module.fascinator.teaser_tab_link.rel|escape_attr }}"{% endif %}
+             >
+            <div class="teaser-tab--text">
+              {{ module.fascinator.teaser_tab_text }}
+            </div> 
+            <div class="teaser-tab--icon">
+              <i class="fa-solid fa-arrow-right-long"></i>              
+            </div>
+          </a>
+          {% endif %}
         </div>
       </div>
     </div>
   </div>
 
   <div class="fascinator-container">
-    ToDo: Looping Video / Image / iFrame / SVG / JS Injected Content
+    {% if module.fascinator.type == 'image' %}
+      {# Image #}
+      {% if module.fascinator.image.src %}
+        <div class="fascinator-image">
+          {% set sizeAttrs = 'width="{{ module.fascinator.image.width|escape_attr }}" height="{{ module.fascinator.image.height|escape_attr }}"' %}
+          {% set loadingAttr = module.fascinator.image.loading != 'disabled' ? 'loading="{{ module.fascinator.image.loading|escape_attr }}"' : '' %}
+          <img src="{{ module.fascinator.image.src|escape_url }}" alt="{{ module.fascinator.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        </div>
+      {% endif %}    
+    {# Image End #}
+    
+    {% elif module.fascinator.type == 'video' %}
+    ToDo: Looping Video 
+    {% elif module.fascinator.type == 'iframe' %}
+    ToDo: iFrame 
+    {% elif module.fascinator.type == 'svg' %}
+    ToDo: SVG 
+    {% elif module.fascinator.type == 'js_injected' %}
+    TODO: JS Injected Content
+    {% endif %}
   </div>
 
 </div>
