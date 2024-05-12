@@ -60,6 +60,7 @@
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
+  "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
     "header_content" : "<h1>Strategic<br>Digital<br>Development</h1>\n<p>Specialising in HubSpot, Umbraco, .NET and Microsoft Dynamics</p>",
@@ -115,6 +116,7 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "full_screen" : true,
@@ -123,6 +125,7 @@
   } ],
   "tab" : "STYLE",
   "expanded" : false,
+  "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
     "size_and_position" : {
@@ -210,6 +213,7 @@
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
+  "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
     "teaser_tab_text" : "Wanna see something fun?",
@@ -312,6 +316,7 @@
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
+  "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
     "teaser_tab_text" : "Wanna see something fun?",
