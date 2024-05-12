@@ -30,6 +30,7 @@ Base HMTL elements are styled in this section (<body>, <h1>, <a>, <p>, <button> 
 {% include './elements/_tables.css' %}
 {% include './elements/_masonry.css' %}
 {% include './elements/_fonts.css' %}
+{% include './elements/_richtext.css' %}
 
 /* Components
 Specific pieces of UI that are stylized. Typically used for global partial styling

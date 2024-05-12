@@ -6,7 +6,7 @@
   "global" : false,
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
   "categories" : [ "DESIGN" ],
-  "icon" : "https://143145429.fs1.hubspotusercontent-eu1.net/hubfs/143145429/Modules/Masonry/masonry-1x4-4sm%20(1).svg",
+  "icon" : "https://139766976.fs1.hubspotusercontent-eu1.net/hubfs/139766976/Module%20Assets/masonry-tiles-1x3-3col.svg",
   "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
   "module_id" : 90085803737,
   "js_assets" : [ {
@@ -14,6 +14,6 @@
     "path" : "../../js/lib/masonry.min.js",
     "name" : "masonry.min.js"
   } ],
-  "label" : "Tiles Three Col",
+  "label" : "Tiles 3col",
   "is_available_for_new_content" : true
 }

@@ -403,43 +403,28 @@
     "type" : "choice",
     "default" : "auto-height"
   }, {
-    "id" : "2bfea575-820a-f7fe-1225-ab7e97a47650",
+    "id" : "bec9a986-f353-649d-9629-08a5956243c8",
+    "name" : "corners",
+    "display_width" : null,
+    "label" : "Corners",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "corners-rounded", "Rounded" ], [ "corners-hard", "Hard" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "corners-rounded"
+  }, {
+    "id" : "a17af732-0e1c-7757-170c-2c26235458e6",
     "name" : "spacing_field",
     "display_width" : null,
     "label" : "Spacing",
     "required" : false,
     "locked" : false,
     "type" : "spacing",
-    "default" : {
-      "margin" : {
-        "top" : {
-          "value" : null,
-          "units" : null
-        },
-        "bottom" : {
-          "value" : 2.13,
-          "units" : "vw"
-        }
-      },
-      "padding" : {
-        "top" : {
-          "value" : 1.5,
-          "units" : "rem"
-        },
-        "bottom" : {
-          "value" : 1.5,
-          "units" : "rem"
-        },
-        "left" : {
-          "value" : 2,
-          "units" : "rem"
-        },
-        "right" : {
-          "value" : 2,
-          "units" : "rem"
-        }
-      }
-    }
+    "default" : { }
   } ],
   "tab" : "STYLE",
   "expanded" : false,
@@ -447,35 +432,6 @@
   "type" : "group",
   "default" : {
     "height_options" : "auto-height",
-    "spacing_field" : {
-      "margin" : {
-        "top" : {
-          "value" : null,
-          "units" : null
-        },
-        "bottom" : {
-          "value" : 2.13,
-          "units" : "vw"
-        }
-      },
-      "padding" : {
-        "top" : {
-          "value" : 1.5,
-          "units" : "rem"
-        },
-        "bottom" : {
-          "value" : 1.5,
-          "units" : "rem"
-        },
-        "left" : {
-          "value" : 2,
-          "units" : "rem"
-        },
-        "right" : {
-          "value" : 2,
-          "units" : "rem"
-        }
-      }
-    }
+    "corners" : "corners-rounded"
   }
 } ]

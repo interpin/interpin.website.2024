@@ -1,0 +1,31 @@
+.sticky-column--container .sticky-col{         
+  position: sticky;        
+  top: 0;                  
+  overflow-y: auto;        
+}
+
+.sticky-column--container .content-box--wrapper .white-open-top-bottom{
+  border: solid 1px white;
+  padding: 10%;
+}
+.sticky-column--container .content-box--wrapper .white-open-top-bottom:first-child {
+  border-top: none;
+}
+.sticky-column--container .content-box--wrapper .white-open-top-bottom:last-child {
+  border-bottom: none;
+}
+
+.top-richtext > .hs_cos_wrapper_type_inline_rich_text > :first-child {
+  padding-top: 5%;
+}
+
+@media (max-width: 767px){
+  .sticky-column--container .sticky-col{
+    height: auto;           
+    position: relative;        
+  }
+  
+  .right-column {
+    margin-top: 10%;
+  }
+}

@@ -1,0 +1,14 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: false
+-->
+
+{% macro render_contentbox(contentbox) %}
+
+<div class="content-box {{ item.border_style }}">
+  <div class="richtext--no-bottom-gap">
+    {% inline_rich_text field="richtext" value="{{ item.richtext }}" %}
+  </div>  
+</div>
+
+{% endmacro %}

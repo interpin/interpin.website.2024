@@ -153,6 +153,25 @@
     "type" : "text",
     "default" : "Wanna see something fun?"
   }, {
+    "id" : "f87d31d4-b9c3-59c4-90a9-30ef8398f9b2",
+    "name" : "teaser_tab_link",
+    "display_width" : null,
+    "label" : "Teaser Tab Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+    "show_advanced_rel_options" : true,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : 98005608668,
+        "href" : null,
+        "type" : "CONTENT"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
     "id" : "2cd88f18-39d1-06f8-05b8-18b010c26767",
     "name" : "type",
     "display_width" : null,
@@ -191,25 +210,6 @@
       "alt" : null,
       "loading" : "lazy"
     }
-  }, {
-    "id" : "f87d31d4-b9c3-59c4-90a9-30ef8398f9b2",
-    "name" : "teaser_tab_link",
-    "display_width" : null,
-    "label" : "Teaser Tab Link",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
-    "show_advanced_rel_options" : true,
-    "type" : "link",
-    "default" : {
-      "url" : {
-        "content_id" : 98005608668,
-        "href" : null,
-        "type" : "CONTENT"
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -217,13 +217,6 @@
   "type" : "group",
   "default" : {
     "teaser_tab_text" : "Wanna see something fun?",
-    "type" : "image",
-    "image" : {
-      "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
-    },
     "teaser_tab_link" : {
       "url" : {
         "content_id" : 98005608668,
@@ -232,6 +225,13 @@
       },
       "open_in_new_tab" : false,
       "no_follow" : false
+    },
+    "type" : "image",
+    "image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
     }
   }
 }, {

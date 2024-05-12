@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "CUSTOMER_PORTAL", "WEB_INTERACTIVE", "BLOG_POST" ],
+  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "module_id" : 102588878543,
+  "label" : "Sticky Column",
+  "is_available_for_new_content" : true
+}

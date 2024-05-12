@@ -1,0 +1,62 @@
+{% import "../partials/sticky-column.html" as ContentBoxPartial %}
+
+{% set left_col_class = 'left-column ' %}
+{% set right_col_class = 'right-column ' %}
+
+{% if module.sticky_column == 'left_column_stick' %}
+ {% set left_col_class = left_col_class ~ 'sticky-col ' %}
+{% else if  module.sticky_column == 'right_column_stick' %}
+ {% set left_col_class = left_col_class ~ 'sticky-col ' %}
+{% endif %}
+
+<div class="sticky-column--container">
+
+  <div class="content-wrapper">
+
+    <div class="row-fluid-wrapper">
+
+      <div class="row-fluid">
+
+        <div class="span6">
+
+          <div class="{{ left_col_class }}">
+
+            <div class="richtext--no-bottom-gap top-richtext">
+              {% inline_rich_text field="left_column.top_rich_text" value="{{ module.left_column.top_rich_text }}" %}
+            </div>
+
+            <div class="content-box--wrapper">
+              {% for item in module.left_column.content_box %}
+              {{ ContentBoxPartial.render_contentbox(item) }}
+              {% endfor %}
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="span6">
+
+          <div class="{{ right_col_class }}">
+
+            <div class="richtext--no-bottom-gap top-richtext">
+              {% inline_rich_text field="right_column.top_rich_text" value="{{ module.right_column.top_rich_text }}" %}
+            </div>
+
+            <div class="content-box--wrapper">
+              {% for item in module.right_column.content_box %}
+              {{ ContentBoxPartial.render_contentbox(item) }}
+              {% endfor %}
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

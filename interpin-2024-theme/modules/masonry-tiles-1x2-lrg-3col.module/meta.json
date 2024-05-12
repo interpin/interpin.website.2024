@@ -6,14 +6,14 @@
   "global" : false,
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
   "categories" : [ "DESIGN" ],
-  "icon" : "https://143145429.fs1.hubspotusercontent-eu1.net/hubfs/143145429/Modules/Masonry/masonry-1x2.svg",
+  "icon" : "https://139766976.fs1.hubspotusercontent-eu1.net/hubfs/139766976/Module%20Assets/masonry-tiles-2&1-3col.svg",
   "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "module_id" : 97997825739,
+  "module_id" : 102602028792,
   "js_assets" : [ {
     "autoload" : true,
     "path" : "../../js/lib/masonry.min.js",
     "name" : "masonry.min.js"
   } ],
-  "label" : "Tiles 4col WideX2",
+  "label" : "Tiles 3col XtraWiderX1",
   "is_available_for_new_content" : true
 }

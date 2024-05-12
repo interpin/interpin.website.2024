@@ -1,0 +1,14 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+
+/* For richtext that should not have a bottom padding or margin */
+.richtext--no-bottom-gap > .hs_cos_wrapper_type_inline_rich_text > :last-child,
+.richtext--no-bottom-gap > .hs_cos_wrapper_type_rich_text > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

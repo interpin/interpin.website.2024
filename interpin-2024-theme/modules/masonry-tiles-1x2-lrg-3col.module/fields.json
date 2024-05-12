@@ -1,57 +1,4 @@
 [ {
-  "id" : "e47466e4-c460-a482-3e76-91d238b5bc43",
-  "name" : "Tiles",
-  "display_width" : null,
-  "label" : "Style",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "e10560ad-25aa-b54d-aa29-881d7117f4c8",
-    "name" : "height_options",
-    "display_width" : null,
-    "label" : "Height Options",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "fixed-height", "Fixed Height (1/4 row width)" ], [ "auto-height", "Fit content of tallest tile on row" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "default" : "auto-height"
-  }, {
-    "id" : "4fab631d-4784-e48f-9467-eadfbfd44c60",
-    "name" : "corners",
-    "display_width" : null,
-    "label" : "Corners",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "corners-rounded", "Rounded" ], [ "corners-hard", "Hard" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "default" : "corners-rounded"
-  }, {
-    "id" : "e2bb7afc-2ccf-bc4a-3fbe-376b985d91f6",
-    "name" : "spacing_field",
-    "display_width" : null,
-    "label" : "Spacing",
-    "required" : false,
-    "locked" : false,
-    "type" : "spacing",
-    "default" : { }
-  } ],
-  "tab" : "STYLE",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "default" : {
-    "height_options" : "auto-height",
-    "corners" : "corners-rounded"
-  }
-}, {
   "id" : "7dd156d5-7f5f-0a6b-33cc-ed4d123130da",
   "name" : "tiles",
   "display_width" : null,
@@ -65,7 +12,7 @@
     "default" : 2
   },
   "children" : [ {
-    "id" : "135c027d-261d-2bb5-4a3d-f887ebb283b8",
+    "id" : "57209b4b-49bd-ce3d-cdeb-fb8d2cf0c3f3",
     "name" : "default_text_color",
     "display_width" : null,
     "label" : "Default Text Color",
@@ -82,6 +29,7 @@
     "name" : "richtext",
     "display_width" : null,
     "label" : "Rich Text",
+    "help_text" : "",
     "required" : false,
     "locked" : false,
     "type" : "richtext",
@@ -116,21 +64,20 @@
       "loading" : "lazy"
     }
   }, {
-    "id" : "9241878c-37be-24a2-7cd0-d2f0ea87aca3",
+    "id" : "2a95610b-beb6-5f11-a234-61396ca7527c",
     "name" : "button_or_link",
     "display_width" : null,
     "label" : "Button or Link",
-    "help_text" : "",
     "inline_help_text" : "Place a link of the entire tile, or render a button at the bottom of the tile",
     "required" : false,
     "locked" : false,
     "display" : "radio",
-    "choices" : [ [ "none1", "None" ], [ "link", "Link over whole tile" ], [ "button", "Button at bottom of tile" ] ],
+    "choices" : [ [ "none", "None" ], [ "link", "Link over whole tile" ], [ "button", "Button at bottom of tile" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "none1"
+    "default" : "none"
   }, {
     "id" : "c445667a-2e70-769e-f49c-bb8a77dd205f",
     "name" : "link",
@@ -160,7 +107,7 @@
       "no_follow" : false
     }
   }, {
-    "id" : "d1ef7292-ccab-6c1f-ceab-b28a7f7d89f1",
+    "id" : "22a366d1-d2b0-2013-223e-7f3a0f1e083c",
     "name" : "buttons_alignment",
     "display_width" : null,
     "label" : "Buttons Alignment",
@@ -182,7 +129,7 @@
     "type" : "choice",
     "default" : "left"
   }, {
-    "id" : "b7b39af4-3449-fa18-e2ac-d8f339dcc9a1",
+    "id" : "ca71b542-4cc7-df6e-a159-8e893fdfbf58",
     "name" : "buttons",
     "display_width" : null,
     "label" : "Buttons",
@@ -191,7 +138,7 @@
     "occurrence" : {
       "min" : 1,
       "max" : 2,
-      "sorting_label_field" : "4eabd9f2-482a-6776-1f06-b0dd158f7419",
+      "sorting_label_field" : "79869ecd-a6e1-96f6-88ea-e4abcc8b735d",
       "default" : 1
     },
     "visibility" : {
@@ -203,7 +150,7 @@
       "access" : null
     },
     "children" : [ {
-      "id" : "4eabd9f2-482a-6776-1f06-b0dd158f7419",
+      "id" : "79869ecd-a6e1-96f6-88ea-e4abcc8b735d",
       "name" : "button_text",
       "display_width" : null,
       "label" : "Button Text",
@@ -212,10 +159,9 @@
       "validation_regex" : "",
       "allow_new_line" : false,
       "show_emoji_picker" : false,
-      "type" : "text",
-      "default" : ""
+      "type" : "text"
     }, {
-      "id" : "b8c6bbfd-6604-2a28-9bfe-49413ef438e5",
+      "id" : "de25fb2d-45a8-9192-ae67-f2a196c820e5",
       "name" : "button_color_style",
       "display_width" : null,
       "label" : "Button Color Style",
@@ -229,7 +175,7 @@
       "type" : "choice",
       "default" : "green"
     }, {
-      "id" : "8b24a857-daf9-ded2-427a-c3b13ca2d73d",
+      "id" : "5339cf40-fb6c-0cc3-0463-002ea1bb8a80",
       "name" : "button_link",
       "display_width" : null,
       "label" : "Button Link",
@@ -253,7 +199,6 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : [ {
-      "button_text" : "",
       "button_color_style" : "green",
       "button_link" : {
         "url" : {
@@ -333,7 +278,7 @@
       "alt" : null,
       "loading" : "lazy"
     },
-    "button_or_link" : "none1",
+    "button_or_link" : "none",
     "link" : {
       "url" : {
         "content_id" : null,
@@ -345,7 +290,6 @@
     },
     "buttons_alignment" : "left",
     "buttons" : [ {
-      "button_text" : "",
       "button_color_style" : "green",
       "button_link" : {
         "url" : {
@@ -373,7 +317,7 @@
       "alt" : null,
       "loading" : "lazy"
     },
-    "button_or_link" : "none1",
+    "button_or_link" : "none",
     "link" : {
       "url" : {
         "content_id" : null,
@@ -385,7 +329,6 @@
     },
     "buttons_alignment" : "left",
     "buttons" : [ {
-      "button_text" : "",
       "button_color_style" : "green",
       "button_link" : {
         "url" : {
@@ -398,4 +341,72 @@
       }
     } ]
   } ]
+}, {
+  "id" : "c99a5c5c-4ff1-25f7-aa79-f54ebf4daffd",
+  "name" : "Tiles",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "f1e51f3f-9c36-6345-3567-f990273d18dd",
+    "name" : "height_options",
+    "display_width" : null,
+    "label" : "Height Options",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "fixed-height", "Fixed Height (1/4 row width)" ], [ "auto-height", "Fit content of tallest tile on row" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "auto-height"
+  }, {
+    "id" : "5487df5b-0113-b4b5-395e-ca662a852094",
+    "name" : "corners",
+    "display_width" : null,
+    "label" : "Corners",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "corners-rounded", "Rounded" ], [ "corners-hard", "Hard" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "corners-rounded"
+  }, {
+    "id" : "49280bff-c599-6198-51c1-8f8ee671bece",
+    "name" : "spacing_field",
+    "display_width" : null,
+    "label" : "Spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : { }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "height_options" : "auto-height",
+    "corners" : "corners-rounded"
+  }
+}, {
+  "id" : "2d900e98-89a7-6b19-0915-a188db8d7741",
+  "name" : "large_tile",
+  "display_width" : null,
+  "label" : "Large Tile",
+  "inline_help_text" : "Select which single tile is double width. Tile 1 is furthest left",
+  "required" : false,
+  "locked" : false,
+  "display" : "radio",
+  "choices" : [ [ "1", "Tile 1" ], [ "2", "Tile 2" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "1"
 } ]

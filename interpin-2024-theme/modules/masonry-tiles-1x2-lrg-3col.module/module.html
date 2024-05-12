@@ -7,11 +7,11 @@
     
     {% for item in module.tiles %}
       {% if loop.index == module.large_tile %}
-        <div class="span9 tile--outer">
+        <div class="span8 tile--outer">
           {{ MasonryPartial.render_tile(item, 'tile_x0_3_width') }}
         </div>
       {% else %}
-        <div class="span3 tile--outer">
+        <div class="span4 tile--outer">
           {{ MasonryPartial.render_tile(item, 'tile_x1_width') }}
         </div>
       {% endif %}

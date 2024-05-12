@@ -429,14 +429,38 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "fixed-height"
+    "default" : "auto-height"
+  }, {
+    "id" : "6762e7a9-2a10-5c5e-f020-527fbaea3c7d",
+    "name" : "corners",
+    "display_width" : null,
+    "label" : "Corners",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "corners-rounded", "Rounded" ], [ "corners-hard", "Hard" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "corners-rounded"
+  }, {
+    "id" : "cf693732-c12b-fb74-b1e1-17552eed1ce8",
+    "name" : "spacing_field",
+    "display_width" : null,
+    "label" : "Spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : { }
   } ],
   "tab" : "STYLE",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "height_options" : "fixed-height"
+    "height_options" : "auto-height",
+    "corners" : "corners-rounded"
   }
 }, {
   "id" : "2d900e98-89a7-6b19-0915-a188db8d7741",

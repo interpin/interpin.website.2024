@@ -1,5 +1,5 @@
 {% import "../partials/masonry.html" as MasonryPartial %}
-{% set wrapper_class = module.Tiles.height_options %}
+{% set wrapper_class = module.Tiles.height_options ~ ' ' ~  module.Tiles.corners %}
 
 <div class="masonry-wrapper row-fluid-wrapper {{ wrapper_class }}">
   <div class="row-fluid">

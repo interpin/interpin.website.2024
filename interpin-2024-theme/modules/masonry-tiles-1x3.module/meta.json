@@ -14,6 +14,6 @@
     "path" : "../../js/lib/masonry.min.js",
     "name" : "masonry.min.js"
   } ],
-  "label" : "Tiles WideX1 / StdX2",
+  "label" : "Tiles 4col WideX1 / StdX2",
   "is_available_for_new_content" : true
 }
