@@ -162,7 +162,7 @@
     "locked" : false,
     "occurrence" : {
       "min" : 1,
-      "max" : 2,
+      "max" : 5,
       "sorting_label_field" : "0e253f2b-3dcb-d3d5-8cbb-8ba486d6f8f9",
       "default" : 1
     },
@@ -193,12 +193,12 @@
       "required" : false,
       "locked" : false,
       "display" : "select",
-      "choices" : [ [ "green", "Green" ], [ "white", "White" ], [ "lavendar", "Lavendar" ], [ "blue", "Blue" ] ],
+      "choices" : [ [ "yellow", "Yellow" ], [ "yellow-hollow", "Yellow Hollow" ], [ "light-grey", "Lightgrey" ], [ "light-grey-hollow", "Lightgrey Hollow" ], [ "teal", "Teal" ], [ "teal-hollow", "Teal Hollow" ], [ "black", "Black" ], [ "black-hollow", "Black Hollow" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "green"
+      "default" : "yellow"
     }, {
       "id" : "eb6c0d73-6f9b-656e-ce00-87ced351fe68",
       "name" : "button_link",
@@ -224,7 +224,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : [ {
-      "button_color_style" : "green",
+      "button_color_style" : "yellow",
       "link_field_1" : {
         "url" : {
           "content_id" : null,
@@ -316,7 +316,7 @@
     },
     "buttons_alignment" : "left",
     "buttons" : [ {
-      "button_color_style" : "green"
+      "button_color_style" : "yellow"
     } ]
   }, {
     "default_text_color" : {
@@ -347,7 +347,7 @@
     },
     "buttons_alignment" : "left",
     "buttons" : [ {
-      "button_color_style" : "green"
+      "button_color_style" : "yellow"
     } ]
   }, {
     "default_text_color" : {
@@ -378,7 +378,7 @@
     },
     "buttons_alignment" : "left",
     "buttons" : [ {
-      "button_color_style" : "green"
+      "button_color_style" : "yellow"
     } ]
   } ]
 }, {

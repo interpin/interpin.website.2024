@@ -123,7 +123,7 @@
     "locked" : false,
     "occurrence" : {
       "min" : 1,
-      "max" : 2,
+      "max" : 5,
       "sorting_label_field" : "1c3a540c-0420-3662-fa7b-61fd13a1c624",
       "default" : 1
     },
@@ -162,12 +162,12 @@
       "required" : false,
       "locked" : false,
       "display" : "select",
-      "choices" : [ [ "green", "Green" ], [ "white", "White" ], [ "lavendar", "Lavendar" ], [ "blue", "Blue" ] ],
+      "choices" : [ [ "yellow", "Yellow" ], [ "yellow-hollow", "Yellow Hollow" ], [ "light-grey", "Lightgrey" ], [ "light-grey-hollow", "Lightgrey Hollow" ], [ "teal", "Teal" ], [ "teal-hollow", "Teal Hollow" ], [ "black", "Black" ], [ "black-hollow", "Black Hollow" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "green"
+      "default" : "black"
     }, {
       "id" : "8cfbfbe5-42d1-dfa7-a191-cdbf49c1b1a8",
       "name" : "button_link",
@@ -193,7 +193,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : [ {
-      "button_color_style" : "green",
+      "button_color_style" : "yellow",
       "button_link" : {
         "url" : {
           "content_id" : null,
@@ -280,7 +280,7 @@
     },
     "buttons_alignment" : "left",
     "buttons" : [ {
-      "button_color_style" : "green",
+      "button_color_style" : "yellow",
       "button_link" : {
         "url" : {
           "content_id" : null,
@@ -315,7 +315,7 @@
     },
     "buttons_alignment" : "left",
     "buttons" : [ {
-      "button_color_style" : "green",
+      "button_color_style" : "yellow",
       "button_link" : {
         "url" : {
           "content_id" : null,
@@ -350,7 +350,7 @@
     },
     "buttons_alignment" : "left",
     "buttons" : [ {
-      "button_color_style" : "green",
+      "button_color_style" : "yellow",
       "button_link" : {
         "url" : {
           "content_id" : null,
@@ -385,7 +385,7 @@
     },
     "buttons_alignment" : "left",
     "buttons" : [ {
-      "button_color_style" : "green",
+      "button_color_style" : "yellow",
       "button_link" : {
         "url" : {
           "content_id" : null,
