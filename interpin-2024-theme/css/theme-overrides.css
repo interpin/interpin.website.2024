@@ -353,15 +353,7 @@ button:focus,
   color: {{ button_color_hover }};
   background-color: {{ button_background_hover }};
   border-radius: {{ button_corner_radius_hover }};
-}
-
-button:active,
-.button:active,
-.hs-button:active,
-.hs-blog-post-listing__post-button:active {
-  {{ button_font.style }};
-  background-color: rgba({{ color_variant(theme.buttons.background.color.color, 40)|convert_rgb }}, {{ theme.buttons.background.color.opacity / 100 }});
-  border-color: {{ color_variant(theme.buttons.border.border.top.color, 40) }};
+  text-decoration: none;
 }
 
 {###########################################################################}
@@ -376,7 +368,6 @@ form,
   border-top-right-radius: {{ form_top_right_corner_radius }};
   border-bottom-left-radius: {{ form_bottom_left_corner_radius }};
   border-bottom-right-radius: {{ form_bottom_right_corner_radius }};
-  background-color: {{ form_bg_color }};
   {{ form_padding }};
 }
 
@@ -392,7 +383,6 @@ form,
   border-bottom-right-radius: {{ form_title_bottom_right_corner_radius }};
   font-size: {{ form_title_font.size  ~ form_title_font.size_unit }};
   color: {{ form_title_font.color }};
-  background-color: {{ form_title_bg_color }};
 }
 
 
