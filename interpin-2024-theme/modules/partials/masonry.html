@@ -27,17 +27,17 @@
     {% set image_alignment_style = "background-position: " ~ image_alignment_style ~ ";" %}
   {% endif %}
 
-{% set padding = module.Tiles.spacing_field.padding %}
-{% set padding_style = 
-  "padding-top: " ~ padding.top.value ~ padding.top.units ~ ";" ~
-  "padding-bottom: " ~ padding.bottom.value ~ padding.bottom.units ~ ";" ~
-  "padding-right: " ~ padding.right.value ~ padding.right.units ~ ";" ~
-  "padding-left: " ~ padding.left.value ~ padding.left.units ~ ";"
-%}
+  {% set padding = module.Tiles.spacing_field.padding %}
+  {% set padding_style = 
+    "padding-top: " ~ padding.top.value ~ padding.top.units ~ ";" ~
+    "padding-bottom: " ~ padding.bottom.value ~ padding.bottom.units ~ ";" ~
+    "padding-right: " ~ padding.right.value ~ padding.right.units ~ ";" ~
+    "padding-left: " ~ padding.left.value ~ padding.left.units ~ ";"
+  %}
 
-  {% set image_size_style = tile.image_size %}
-  {% if image_size_style %}
-    {% set image_size_style = "background-size: " ~ image_size_style ~ ";" %}
+  {% set background_image_size_style = tile.background_image_size %}
+  {% if background_image_size_style %}
+    {% set background_image_size_style = "background-size: " ~ background_image_size_style ~ ";" %}
   {% endif %}
 
   {% if tile.button_or_link == 'link' %}
@@ -80,7 +80,7 @@
       
   {% endif %}
       
-    <div class="tile-inner" style="{{ padding_style }}{{ background_image_style }}{{ background_color_style }}{{ default_text_color_style }}{{image_alignment_style}}{{ image_size_style }}">
+    <div class="tile-inner" style="{{ padding_style }}{{ background_image_style }}{{ background_color_style }}{{ default_text_color_style }}{{image_alignment_style}}{{ background_image_size_style }}">
       
       {% inline_rich_text field="richtext" value="{{ tile.richtext }}" %}
       

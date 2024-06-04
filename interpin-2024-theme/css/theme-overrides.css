@@ -458,7 +458,6 @@ form .hs-button {
   {{ form_submit_button_border }};
   {{ form_submit_button_spacing }};
   {{ form_submit_button_font.style }};
-  color: {{form_submit_button_font.color}};
   font-size: {{form_submit_button_font.size ~ form_submit_button_font.size_unit}};
   background-color: {{ form_submit_button_bg_color }};
   border-radius: {{ button_corner_radius }};

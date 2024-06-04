@@ -64,6 +64,20 @@
       "loading" : "lazy"
     }
   }, {
+    "id" : "41a41c4b-69fa-9af6-1a4e-0813b7cd6fb1",
+    "name" : "background_image_size",
+    "display_width" : null,
+    "label" : "Background Image Size",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "auto", "Auto" ], [ "contain", "Contain" ], [ "cover", "Cover" ], [ "50%", "50%" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "cover"
+  }, {
     "id" : "2a95610b-beb6-5f11-a234-61396ca7527c",
     "name" : "button_or_link",
     "display_width" : null,
@@ -278,6 +292,7 @@
       "alt" : null,
       "loading" : "lazy"
     },
+    "background_image_size" : "cover",
     "button_or_link" : "none",
     "link" : {
       "url" : {
@@ -300,7 +315,12 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ]
+    } ],
+    "visibility_breakpoints" : {
+      "hide_on_mobile" : false,
+      "hide_on_tablets" : false,
+      "hide_on_large" : false
+    }
   }, {
     "default_text_color" : {
       "color" : "#ffffff",
@@ -317,6 +337,7 @@
       "alt" : null,
       "loading" : "lazy"
     },
+    "background_image_size" : "cover",
     "button_or_link" : "none",
     "link" : {
       "url" : {
@@ -339,7 +360,12 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ]
+    } ],
+    "visibility_breakpoints" : {
+      "hide_on_mobile" : false,
+      "hide_on_tablets" : false,
+      "hide_on_large" : false
+    }
   } ]
 }, {
   "id" : "c99a5c5c-4ff1-25f7-aa79-f54ebf4daffd",
@@ -392,7 +418,8 @@
   "type" : "group",
   "default" : {
     "height_options" : "auto-height",
-    "corners" : "corners-rounded"
+    "corners" : "corners-rounded",
+    "spacing_field" : { }
   }
 }, {
   "id" : "2d900e98-89a7-6b19-0915-a188db8d7741",

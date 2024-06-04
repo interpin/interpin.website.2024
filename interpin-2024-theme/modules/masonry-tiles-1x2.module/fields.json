@@ -49,7 +49,8 @@
   "type" : "group",
   "default" : {
     "height_options" : "auto-height",
-    "corners" : "corners-rounded"
+    "corners" : "corners-rounded",
+    "spacing_field" : { }
   }
 }, {
   "id" : "7dd156d5-7f5f-0a6b-33cc-ed4d123130da",
@@ -398,4 +399,18 @@
       }
     } ]
   } ]
+}, {
+  "id" : "e5550435-38bf-3a12-0fb4-96a34082872d",
+  "name" : "background_image_size",
+  "display_width" : null,
+  "label" : "Background Image Size",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "auto", "Auto" ], [ "contain", "Contain" ], [ "cover", "Cover" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "cover"
 } ]
