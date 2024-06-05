@@ -1,0 +1,10 @@
+[ {
+  "id" : "3fe74785-c9ee-1385-8361-57dfe98c1118",
+  "name" : "navigation_menu",
+  "display_width" : null,
+  "label" : "Navigation Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "simplemenu",
+  "default" : [ ]
+} ]

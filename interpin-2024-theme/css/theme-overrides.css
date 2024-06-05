@@ -609,17 +609,6 @@ tfoot td {
   border-top-color: {{ nav_font_color }};
 }
 
-@media(max-width: 767px) {
-  .header__navigation {
-    background-color: {{ header_bg_color }};
-  }
-
-  .header__navigation-toggle svg,
-  .menu-arrow svg {
-    fill: {{ nav_font_color }};
-  }
-}
-
 {###########################################################################}
 {###########################   8. Website footer   #########################}
 {###########################################################################}

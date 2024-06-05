@@ -1,0 +1,9 @@
+{
+  "global" : true,
+  "content_types" : [ "KNOWLEDGE_BASE", "QUOTE_TEMPLATE", "LANDING_PAGE", "SITE_PAGE", "CUSTOMER_PORTAL", "WEB_INTERACTIVE", "BLOG_LISTING", "BLOG_POST" ],
+  "smart_type" : "NOT_SMART",
+  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "module_id" : 105093335022,
+  "label" : "Navigation",
+  "is_available_for_new_content" : true
+}
