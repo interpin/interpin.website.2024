@@ -170,37 +170,23 @@
 
   <div class="header__container content-wrapper">
 
-      {# Header logo column #}
-      <div class="header__logo header__logo--main header__section">
-        {% module "site_logo"
+    {# Header logo column #}
+    <div class="header__logo header__logo--main header__section">
+      {% module "site_logo"
           path="@hubspot/logo"
           img={
             "loading": "eager"
           }
         %}
-      </div>
+    </div>
 
-      {# Header navigation column #}
-      <div class="header__column header__section">
+    <div class="header__navigation">
+      {% module "navigation"
+        path="../../modules/navigation",
+        label="Navigation"
+      %}
+    </div>
 
-        {# Header navigation row #}
-        {# commented out as not needed for phase 1
-        <div class="header__row">
-          <div class="header--toggle header__navigation--toggle"></div>
-          <div class="header__close--toggle"></div>
-          <div class="header__navigation header--element">
-            {% module "navigation-primary"
-              path="../../modules/menu",
-              label="Primary navigation"
-            %}
-          </div>
-          <div class="header__navigation header--element">
-          </div>
-        </div>
-        #}
-
-      </div>
-  
   </div>
  
 </header>

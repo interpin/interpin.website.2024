@@ -71,7 +71,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "auto", "Auto" ], [ "contain", "Contain" ], [ "cover", "Cover" ], [ "50%", "50%" ] ],
+    "choices" : [ [ "auto", "Auto" ], [ "contain", "Contain" ], [ "cover", "Cover" ], [ "50%", "50%" ], [ "60%", "60%" ], [ "70%", "70%" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,

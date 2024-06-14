@@ -117,6 +117,20 @@
       "loading" : "lazy"
     }
   }, {
+    "id" : "fa7e440a-66d4-549d-f355-375cb8e6006a",
+    "name" : "background_image_size",
+    "display_width" : null,
+    "label" : "Background Image Size",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "auto", "Auto" ], [ "contain", "Contain" ], [ "cover", "Cover" ], [ "50%", "50%" ], [ "60%", "60%" ], [ "70%", "70%" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "cover"
+  }, {
     "id" : "9241878c-37be-24a2-7cd0-d2f0ea87aca3",
     "name" : "button_or_link",
     "display_width" : null,
@@ -357,7 +371,13 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ]
+    } ],
+    "visibility_breakpoints" : {
+      "hide_on_mobile" : false,
+      "hide_on_tablets" : false,
+      "hide_on_large" : false
+    },
+    "background_image_size" : "cover"
   }, {
     "default_text_color" : {
       "color" : "#ffffff",
@@ -397,7 +417,13 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ]
+    } ],
+    "visibility_breakpoints" : {
+      "hide_on_mobile" : false,
+      "hide_on_tablets" : false,
+      "hide_on_large" : false
+    },
+    "background_image_size" : "cover"
   } ]
 }, {
   "id" : "e5550435-38bf-3a12-0fb4-96a34082872d",

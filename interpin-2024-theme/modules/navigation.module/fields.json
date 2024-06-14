@@ -7,4 +7,14 @@
   "locked" : true,
   "type" : "simplemenu",
   "default" : [ ]
+}, {
+  "id" : "362b0fd3-c5b7-38d9-17e7-07c2ec29e439",
+  "name" : "hide_menu",
+  "display_width" : null,
+  "label" : "Hide Menu",
+  "required" : false,
+  "locked" : true,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
 } ]

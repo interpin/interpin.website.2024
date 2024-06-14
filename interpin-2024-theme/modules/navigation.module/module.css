@@ -1,8 +1,11 @@
 .navigation-wrapper .burger-wrapper{
   position: absolute;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
+}
+.fascinator-at-top .navigation-wrapper .burger-wrapper{
+  width: 50%;
 }
 
 .navigation-wrapper .burger{
@@ -23,7 +26,7 @@
   text-align: center;
   transition: all .15s linear;
   white-space: normal;
-  
+
   z-index: 10;
 }
 
@@ -42,7 +45,7 @@ body.navigation-show .navigation-wrapper .burger .fa-bars,
 }
 
 .navigation-wrapper .burger:hover{
-    background-color: #1a334e;
+  background-color: #1a334e;
 }
 
 .navigation-wrapper .navigation-pullout{
@@ -63,7 +66,9 @@ body.navigation-show .navigation-wrapper .burger .fa-bars,
   opacity: 0;
   transition: left 0.25s ease-in-out, opacity 0.25s ease-in-out;
   display: none;
+  border-right: 1px solid #fff;
 }
+
 
 body.navigation-show .navigation-wrapper .navigation-pullout,
 .navigation-wrapper.open .navigation-pullout{ 
@@ -99,10 +104,10 @@ body.navigation-block{
   margin-right: 0;
 }
 
-/* Depth 1 */
+/* Default for all depths */
 .navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul li{
   margin: 16px 0;
-  padding-left: 0.5rem;
+  padding-left: 1.5rem;
 }
 
 .navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul li a{
@@ -112,16 +117,43 @@ body.navigation-block{
   font-weight: 500;
   color: #fff;
 }
+.navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul li a .chevron{
+  padding-left: 8px;
+}
+
+/* Depth 1 */
+.navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul li.hs-menu-depth-1{
+  padding-left: 0.5rem;
+}
+
+.navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul li.hs-menu-depth-1 a{
+  font-family: Space Grotesk;
+}
 
 /* Depth 2 */
 .navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul li.hs-menu-depth-2{
-      margin-bottom: 0;
-    margin-top: 0px;
+  margin-bottom: 0;
+  margin-top: 8px;
 }
 
 .navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul li.hs-menu-depth-2 a{
   padding-bottom: 0;
   font-size: 1rem;
+  
+  font-family: Space Grotesk;
+}
+
+/* Depth 3 */
+.navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul li.hs-menu-depth-3{
+  margin-bottom: 0;
+  margin-top: 0px;
+}
+
+.navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul li.hs-menu-depth-3 a{
+  padding-bottom: 0;
+  font-size: 0.8rem;
+  
+  font-weight: 300;
 }
 
 /* Override default hs menu behavior. TODO - delete this behavior from other css */
@@ -130,14 +162,21 @@ body.navigation-block{
   opacity: 1;
   position: relative;
   left: auto;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  display: block;
 }
 
 @media (max-width: 1160px) {
   .navigation-wrapper .burger-wrapper{
     width: 100%;
   }
-  
+
   .navigation-wrapper .navigation-pullout{
     width: 100vw;
+  }
+
+  .navigation-wrapper .navigation-pullout .hs-menu-wrapper > ul{
+    max-width: 100%
   }
 }
