@@ -1,12 +1,17 @@
 /* Theme base styles */
 
+/** Refresh Cache **/
+body.refresh-cache[202410101936]{
+  background: red;
+}
+
 /* Tools
 Any animations, or functions used throughout the project.
 Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
 */
 
 /* Generic
-This is where reset, normalize & box-sizing styles go.
+This is where reset, normalize & box-sizing styles go
 */
 
 {% include './generic/_reset.css' %}

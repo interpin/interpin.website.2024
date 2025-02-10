@@ -1,7 +1,6 @@
 [ {
   "id" : "c727408b-f263-59b9-554c-1b9cf16e9e21",
   "name" : "sticky_column",
-  "display_width" : null,
   "label" : "Sticky Column",
   "required" : false,
   "locked" : false,
@@ -11,27 +10,26 @@
   "reordering_enabled" : true,
   "preset" : null,
   "type" : "choice",
+  "display_width" : null,
   "default" : "left_column_stick"
 }, {
   "id" : "5b629d57-e918-4e6b-8aa8-58392970289a",
   "name" : "left_column",
-  "display_width" : null,
   "label" : "Left Column",
   "required" : false,
   "locked" : false,
   "children" : [ {
     "id" : "74373a71-6638-3f7d-06ad-e8d3fa6fbdbb",
     "name" : "top_rich_text",
-    "display_width" : null,
     "label" : "Top Rich Text",
     "required" : false,
     "locked" : false,
     "type" : "richtext",
+    "display_width" : null,
     "default" : "<h2>Digital Transformation Strategy</h2>\n<p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>"
   }, {
     "id" : "2217aa44-6ad4-bd7b-84b6-57e0b8e94200",
     "name" : "content_box",
-    "display_width" : null,
     "label" : "Content Box",
     "required" : false,
     "locked" : false,
@@ -44,16 +42,15 @@
     "children" : [ {
       "id" : "a38602a9-102d-0c5d-315d-1b7de8521466",
       "name" : "richtext",
-      "display_width" : null,
       "label" : "Rich text",
       "required" : false,
       "locked" : false,
       "type" : "richtext",
+      "display_width" : null,
       "default" : "<h3>Stage 1: Digital Novice</h3>\n<h6><span style=\"color: #74fdfd;\">Characteristics</span></h6>\n<p>Limited digital presence, relience on traditional business methods, minimal use of digital tools.</p>"
     }, {
       "id" : "c2b3d47c-b61b-dc87-77a5-d09024f8daff",
       "name" : "border_style",
-      "display_width" : null,
       "label" : "Border Style",
       "required" : false,
       "locked" : false,
@@ -63,18 +60,21 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "white-open-top-bottom"
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
+    "display_width" : null,
     "default" : [ ]
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "top_rich_text" : "<h2>Digital Transformation Strategy</h2>\n<p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>",
     "content_box" : [ ]
@@ -82,23 +82,21 @@
 }, {
   "id" : "6fa6399f-8a6d-5a77-b76c-358da7380e1f",
   "name" : "right_column",
-  "display_width" : null,
   "label" : "Right Column",
   "required" : false,
   "locked" : false,
   "children" : [ {
     "id" : "5f11c25f-069a-20e2-2019-cee3ab6579a7",
     "name" : "top_rich_text",
-    "display_width" : null,
     "label" : "Top Rich Text",
     "required" : false,
     "locked" : false,
     "type" : "richtext",
+    "display_width" : null,
     "default" : "<h2>Digital Transformation Strategy</h2>\n<p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>"
   }, {
     "id" : "3c2310bd-1190-0c1f-a11b-aaa82ce2cba2",
     "name" : "content_box",
-    "display_width" : null,
     "label" : "Content Box",
     "required" : false,
     "locked" : false,
@@ -111,16 +109,15 @@
     "children" : [ {
       "id" : "0e19a8d2-1303-5258-bdc0-cc5c59b0787e",
       "name" : "richtext",
-      "display_width" : null,
       "label" : "Rich text",
       "required" : false,
       "locked" : false,
       "type" : "richtext",
+      "display_width" : null,
       "default" : "<h3>Stage 1: Digital Novice</h3>\n<h6><span style=\"color: #74fdfd;\">Characteristics</span></h6>\n<p>Limited digital presence, relience on traditional business methods, minimal use of digital tools.</p>"
     }, {
       "id" : "92fad422-d5f9-e23d-e00d-f08a063b42a6",
       "name" : "border_style",
-      "display_width" : null,
       "label" : "Border Style",
       "required" : false,
       "locked" : false,
@@ -130,12 +127,14 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "white-open-top-bottom"
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
+    "display_width" : null,
     "default" : [ {
       "richtext" : "<h3>Stage 1: Digital Novice</h3>\n<h6><span style=\"color: #74fdfd;\">Characteristics</span></h6>\n<p>Limited digital presence, relience on traditional business methods, minimal use of digital tools.</p>",
       "border_style" : "white-open-top-bottom"
@@ -145,6 +144,7 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "top_rich_text" : "<h2>Digital Transformation Strategy</h2>\n<p>Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.</p>",
     "content_box" : [ {

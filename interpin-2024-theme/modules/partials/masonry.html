@@ -10,6 +10,9 @@
 
   {% if tile.background_image %}
     {% set background_image_style = "background-image: url(" ~ tile.background_image.src ~ ");" %}
+    {% if tile.background_svg_load_behavior %}
+      {% set background_image_classes = tile.background_svg_load_behavior %}
+    {% endif %}
   {% endif %}
 
   {% if tile.background_color.color %}
@@ -80,7 +83,7 @@
       
   {% endif %}
       
-    <div class="tile-inner" style="{{ padding_style }}{{ background_image_style }}{{ background_color_style }}{{ default_text_color_style }}{{image_alignment_style}}{{ background_image_size_style }}">
+    <div class="tile-inner {{ background_image_classes }}" style="{{ padding_style }}{{ background_image_style }}{{ background_color_style }}{{ default_text_color_style }}{{image_alignment_style}}{{ background_image_size_style }}">
       
       {% inline_rich_text field="richtext" value="{{ tile.richtext }}" %}
       

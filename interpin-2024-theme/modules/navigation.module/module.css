@@ -1,3 +1,7 @@
+header{
+  height: 114px;
+}
+
 .navigation-wrapper .burger-wrapper{
   position: absolute;
   left: 0;
@@ -53,7 +57,7 @@ body.navigation-show .navigation-wrapper .burger .fa-bars,
   left: -50px;
   bottom: 0;
   background-color: #000;
-  height: calc(100vh - 115px);
+  height: calc(100vh - 114px);
   width: 50vw;
   z-index: 5;
   font-size: 24px;
@@ -168,7 +172,7 @@ body.navigation-block{
 }
 
 @media (max-width: 1160px) {
-  .navigation-wrapper .burger-wrapper{
+  .fascinator-at-top .navigation-wrapper .burger-wrapper{
     width: 100%;
   }
 

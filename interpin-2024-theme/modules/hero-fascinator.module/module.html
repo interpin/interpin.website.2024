@@ -110,7 +110,25 @@
     {# Image End #}
     
     {% elif module.fascinator.type == 'video' %}
-    ToDo: Looping Video 
+
+      <div class="fascinator-video">
+        {% if module.fascinator.video.player_id %}
+        {% set max_width = module.fascinator.video.size_type == 'auto_custom_max' ? module.fascinator.video.max_width : module.fascinator.video.width %}
+        {% set max_height = module.fascinator.video.size_type == 'auto_custom_max' ? module.fascinator.video.max_height : module.fascinator.video.height %}
+        {% video_player "embed_player"
+          player_id={{ module.fascinator.video.player_id }},
+          type='scriptV4',
+          full_width=True,
+          full_height=True,
+          autoplay=True,
+          hidden_controls=True,
+          loop=True,
+          muted=True
+        %}
+      </div>
+
+    {% endif %}
+    
     {% elif module.fascinator.type == 'iframe' %}
     ToDo: iFrame 
     {% elif module.fascinator.type == 'svg' %}

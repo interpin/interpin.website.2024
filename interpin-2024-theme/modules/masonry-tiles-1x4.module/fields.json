@@ -1,7 +1,6 @@
 [ {
   "id" : "7dd156d5-7f5f-0a6b-33cc-ed4d123130da",
   "name" : "tiles",
-  "display_width" : null,
   "label" : "Tiles",
   "required" : false,
   "locked" : false,
@@ -14,20 +13,20 @@
   "children" : [ {
     "id" : "cf776082-7f1c-6285-dbf7-ec1547c4a2e7",
     "name" : "richtext",
-    "display_width" : null,
     "label" : "Rich Text",
     "required" : false,
     "locked" : false,
     "type" : "richtext",
+    "display_width" : null,
     "default" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla.</span></p>"
   }, {
     "id" : "69712188-1c6c-97b4-f108-ffaf6b935ce9",
     "name" : "background_color",
-    "display_width" : null,
     "label" : "Background Color",
     "required" : false,
     "locked" : false,
     "type" : "color",
+    "display_width" : null,
     "default" : {
       "color" : "#1B1D36",
       "opacity" : 100
@@ -35,7 +34,6 @@
   }, {
     "id" : "f7abaccc-f5d3-c43e-a256-501ca5981ecc",
     "name" : "background_image",
-    "display_width" : null,
     "label" : "Background Image",
     "required" : false,
     "locked" : false,
@@ -43,6 +41,7 @@
     "resizable" : false,
     "show_loading" : false,
     "type" : "image",
+    "display_width" : null,
     "default" : {
       "size_type" : "auto",
       "src" : "",
@@ -52,7 +51,6 @@
   }, {
     "id" : "46b8ed6f-f5eb-6dda-b9e2-479388ad2e21",
     "name" : "button_or_link",
-    "display_width" : null,
     "label" : "Button or Link",
     "inline_help_text" : "Place a link of the entire tile, or render a button at the bottom of the tile",
     "required" : false,
@@ -63,11 +61,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "none"
   }, {
     "id" : "c445667a-2e70-769e-f49c-bb8a77dd205f",
     "name" : "link",
-    "display_width" : null,
     "label" : "Link",
     "help_text" : "Add a link for the entire tile",
     "required" : false,
@@ -83,6 +81,7 @@
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
     "show_advanced_rel_options" : false,
     "type" : "link",
+    "display_width" : null,
     "default" : {
       "url" : {
         "content_id" : null,
@@ -95,7 +94,6 @@
   }, {
     "id" : "1935ee02-f0b0-9f30-9231-006016dbbe65",
     "name" : "buttons_alignment",
-    "display_width" : null,
     "label" : "Buttons Alignment",
     "required" : false,
     "locked" : false,
@@ -113,11 +111,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "left"
   }, {
     "id" : "99c9b90b-9c9b-f301-219d-d7655e2b0713",
     "name" : "buttons",
-    "display_width" : null,
     "label" : "Buttons",
     "required" : false,
     "locked" : false,
@@ -138,7 +136,6 @@
     "children" : [ {
       "id" : "1c3a540c-0420-3662-fa7b-61fd13a1c624",
       "name" : "button_text",
-      "display_width" : null,
       "label" : "Text",
       "required" : false,
       "locked" : false,
@@ -153,11 +150,11 @@
       },
       "allow_new_line" : false,
       "show_emoji_picker" : false,
-      "type" : "text"
+      "type" : "text",
+      "display_width" : null
     }, {
       "id" : "bd3097e7-9f70-3e70-6a09-e11d75140574",
       "name" : "button_color_style",
-      "display_width" : null,
       "label" : "Button Color Style",
       "required" : false,
       "locked" : false,
@@ -167,17 +164,18 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "black"
     }, {
       "id" : "8cfbfbe5-42d1-dfa7-a191-cdbf49c1b1a8",
       "name" : "button_link",
-      "display_width" : null,
       "label" : "Button Link",
       "required" : false,
       "locked" : false,
       "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
       "show_advanced_rel_options" : false,
       "type" : "link",
+      "display_width" : null,
       "default" : {
         "url" : {
           "content_id" : null,
@@ -192,6 +190,7 @@
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
+    "display_width" : null,
     "default" : [ {
       "button_color_style" : "yellow",
       "button_link" : {
@@ -207,45 +206,45 @@
   }, {
     "id" : "02b3d6db-81b8-2e46-6cbd-0aef4090c018",
     "name" : "visibility_breakpoints",
-    "display_width" : null,
     "label" : "Visibility Breakpoints",
     "required" : false,
     "locked" : false,
     "children" : [ {
       "id" : "69091014-8158-493f-f0e3-c1fb92c106c9",
       "name" : "hide_on_mobile",
-      "display_width" : null,
       "label" : "Hide on Mobile (< 768px)",
       "required" : false,
       "locked" : false,
       "display" : "toggle",
       "type" : "boolean",
+      "display_width" : null,
       "default" : false
     }, {
       "id" : "9b3c245a-dfdf-019d-8c9d-1f55973179c2",
       "name" : "hide_on_tablets",
-      "display_width" : null,
       "label" : "Hide on Tablet (768px < 1200px)",
       "required" : false,
       "locked" : false,
       "display" : "toggle",
       "type" : "boolean",
+      "display_width" : null,
       "default" : false
     }, {
       "id" : "d083ed75-d6f0-a9c1-b17e-879dd37ad453",
       "name" : "hide_on_large",
-      "display_width" : null,
       "label" : "Hide on Large (1200px +)",
       "required" : false,
       "locked" : false,
       "display" : "toggle",
       "type" : "boolean",
+      "display_width" : null,
       "default" : false
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
+    "display_width" : null,
     "default" : {
       "hide_on_mobile" : false,
       "hide_on_tablets" : false,
@@ -256,6 +255,7 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : [ {
     "richtext" : "<h3><span style=\"color: #ffffff;\">Lorem Ipsum</span></h3>\n<p><span style=\"color: #ffffff;\">Nullam nec commodo felis. Fusce tristique magna vitae erat fermentum fringilla.</span></p>",
     "background_color" : {
@@ -400,14 +400,12 @@
 }, {
   "id" : "29b89185-b68a-6bf0-ec9a-63860d2c8a4b",
   "name" : "Tiles",
-  "display_width" : null,
   "label" : "Style",
   "required" : false,
   "locked" : false,
   "children" : [ {
     "id" : "c0713627-db38-4a84-cd65-f146b7a331e0",
     "name" : "height_options",
-    "display_width" : null,
     "label" : "Height Options",
     "required" : false,
     "locked" : false,
@@ -417,11 +415,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "auto-height"
   }, {
     "id" : "1c98cbdb-329a-f716-8f83-8ffaaa4ecf3b",
     "name" : "corners",
-    "display_width" : null,
     "label" : "Corners",
     "required" : false,
     "locked" : false,
@@ -431,21 +429,23 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "corners-rounded"
   }, {
     "id" : "0a791c92-e0b5-a827-0341-438c6b59b9d4",
     "name" : "spacing_field",
-    "display_width" : null,
     "label" : "Spacing",
     "required" : false,
     "locked" : false,
     "type" : "spacing",
+    "display_width" : null,
     "default" : { }
   } ],
   "tab" : "STYLE",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "height_options" : "auto-height",
     "corners" : "corners-rounded"

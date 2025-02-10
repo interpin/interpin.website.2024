@@ -411,7 +411,6 @@ form select,
 form textarea {
   {{ form_field_border }}
   background-color: {{ form_field_bg_color }};
-  color: {{ form_field_font_color }};
   border-radius: {{ form_field_corner_radius }};
 }
 

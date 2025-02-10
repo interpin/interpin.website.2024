@@ -6,7 +6,6 @@
   "global" : false,
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
   "categories" : [ "DESIGN" ],
-  "icon" : "https://139766976.fs1.hubspotusercontent-eu1.net/hubfs/139766976/Module%20Assets/masonry-tiles-1x3-3col.svg",
   "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
   "module_id" : 90085803737,
   "js_assets" : [ {
@@ -15,5 +14,6 @@
     "name" : "masonry.min.js"
   } ],
   "label" : "Tiles 3col",
+  "icon" : "https://139766976.fs1.hubspotusercontent-eu1.net/hubfs/139766976/Module%20Assets/masonry-tiles-1x3-3col.svg",
   "is_available_for_new_content" : true
 }

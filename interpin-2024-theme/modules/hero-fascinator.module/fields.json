@@ -1,29 +1,28 @@
 [ {
   "id" : "66f0f15c-cad6-5dd7-2491-55e06ee9d767",
   "name" : "content",
-  "display_width" : null,
   "label" : "Content",
   "required" : false,
   "locked" : false,
   "children" : [ {
     "id" : "8487f187-c9c9-6f59-b024-1c0f5354908c",
     "name" : "header_content",
-    "display_width" : null,
     "label" : "Header Content",
     "required" : false,
     "locked" : false,
     "type" : "richtext",
+    "display_width" : null,
     "default" : "<h1>Strategic<br>Digital<br>Development</h1>\n<p>Specialising in HubSpot, Umbraco, .NET and Microsoft Dynamics</p>"
   }, {
     "id" : "477fcd8e-295b-ff87-2a89-196180e453a9",
     "name" : "link_field",
-    "display_width" : null,
     "label" : "Link",
     "required" : false,
     "locked" : false,
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
     "show_advanced_rel_options" : false,
     "type" : "link",
+    "display_width" : null,
     "default" : {
       "url" : {
         "content_id" : null,
@@ -36,7 +35,6 @@
   }, {
     "id" : "6f1aa46f-ad69-c2b8-31e5-987607728257",
     "name" : "link_text",
-    "display_width" : null,
     "label" : "Link Text",
     "required" : false,
     "locked" : false,
@@ -44,11 +42,11 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
+    "display_width" : null,
     "default" : "DISCOVER MORE ABOUT INTERPIN"
   }, {
     "id" : "b60b0941-62e5-f1f1-5b02-5e76ee50e185",
     "name" : "vertical_text",
-    "display_width" : null,
     "label" : "Vertical Text",
     "required" : false,
     "locked" : false,
@@ -56,12 +54,14 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
+    "display_width" : null,
     "default" : "ELEVATING BUSINESS"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "header_content" : "<h1>Strategic<br>Digital<br>Development</h1>\n<p>Specialising in HubSpot, Umbraco, .NET and Microsoft Dynamics</p>",
     "link_field" : {
@@ -79,21 +79,18 @@
 }, {
   "id" : "c575e662-e38e-e264-0206-8f863b37d3ec",
   "name" : "style",
-  "display_width" : null,
   "label" : "Style",
   "required" : false,
   "locked" : false,
   "children" : [ {
     "id" : "16de4447-ffed-ce76-58e3-cce7dc6405cd",
     "name" : "size_and_position",
-    "display_width" : null,
     "label" : "Size and Position",
     "required" : false,
     "locked" : false,
     "children" : [ {
       "id" : "cfae2b90-be4d-086f-16ee-2d7590c33447",
       "name" : "full_screen",
-      "display_width" : null,
       "label" : "Full Screen",
       "help_text" : "",
       "inline_help_text" : "Match the size of the hero to the size of screen. Only works if the containers and column are also full screen.",
@@ -101,23 +98,25 @@
       "locked" : false,
       "display" : "checkbox",
       "type" : "boolean",
+      "display_width" : null,
       "default" : true
     }, {
       "id" : "6e5cdedc-76a6-22f2-0195-9592957abab6",
       "name" : "behind_header",
-      "display_width" : null,
       "label" : "Fall behind header",
       "inline_help_text" : "The hero will display underneath the header. this is achieved by adding minus margin to the top of the module",
       "required" : false,
       "locked" : false,
       "display" : "checkbox",
       "type" : "boolean",
+      "display_width" : null,
       "default" : true
     } ],
     "tab" : "STYLE",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
+    "display_width" : null,
     "default" : {
       "full_screen" : true,
       "behind_header" : true
@@ -127,6 +126,7 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "size_and_position" : {
       "full_screen" : true,
@@ -136,14 +136,12 @@
 }, {
   "id" : "ef0268d3-c0dc-d508-da32-aa7ff3bf1b38",
   "name" : "fascinator",
-  "display_width" : null,
   "label" : "Fascinator",
   "required" : false,
   "locked" : false,
   "children" : [ {
     "id" : "392d8148-bdf9-2876-16dd-07b817b594d6",
     "name" : "teaser_tab_text",
-    "display_width" : null,
     "label" : "Teaser Tab Text",
     "required" : false,
     "locked" : false,
@@ -151,17 +149,18 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
+    "display_width" : null,
     "default" : "Wanna see something fun?"
   }, {
     "id" : "f87d31d4-b9c3-59c4-90a9-30ef8398f9b2",
     "name" : "teaser_tab_link",
-    "display_width" : null,
     "label" : "Teaser Tab Link",
     "required" : false,
     "locked" : false,
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
     "show_advanced_rel_options" : true,
     "type" : "link",
+    "display_width" : null,
     "default" : {
       "url" : {
         "content_id" : 98005608668,
@@ -174,7 +173,6 @@
   }, {
     "id" : "2cd88f18-39d1-06f8-05b8-18b010c26767",
     "name" : "type",
-    "display_width" : null,
     "label" : "Type",
     "required" : false,
     "locked" : false,
@@ -184,11 +182,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "image"
   }, {
     "id" : "67962a9c-d054-4ba9-1bf9-b2123df4be40",
     "name" : "image",
-    "display_width" : null,
     "label" : "Image",
     "required" : false,
     "locked" : false,
@@ -204,17 +202,38 @@
     "resizable" : false,
     "show_loading" : false,
     "type" : "image",
+    "display_width" : null,
     "default" : {
       "size_type" : "auto",
       "src" : "",
       "alt" : null,
       "loading" : "lazy"
     }
+  }, {
+    "id" : "59d0eb23-2ff5-d606-1f73-ac0164e20e5f",
+    "name" : "video",
+    "label" : "Video",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "fascinator.type",
+      "controlling_value_regex" : "video",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "resizable" : false,
+    "show_preview" : false,
+    "show_advanced_options" : false,
+    "type" : "videoplayer",
+    "display_width" : null
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "teaser_tab_text" : "Wanna see something fun?",
     "teaser_tab_link" : {
@@ -237,7 +256,6 @@
 }, {
   "id" : "766d142e-d433-d6d4-2772-e61b5ae12e25",
   "name" : "fascinator_tablet",
-  "display_width" : null,
   "label" : "Fascinator Fallback (tablet)",
   "help_text" : "",
   "inline_help_text" : "This will be displayed in the background at 1160px and lower. Recommend using videos and images",
@@ -246,7 +264,6 @@
   "children" : [ {
     "id" : "7d39de96-5432-b189-6b3e-a09f277c4739",
     "name" : "teaser_tab_text",
-    "display_width" : null,
     "label" : "Teaser Tab Text",
     "required" : false,
     "locked" : false,
@@ -254,11 +271,11 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
+    "display_width" : null,
     "default" : "Wanna see something fun?"
   }, {
     "id" : "cffefdff-0c53-c8ea-42db-e524edd8708c",
     "name" : "type",
-    "display_width" : null,
     "label" : "Type",
     "required" : false,
     "locked" : false,
@@ -268,11 +285,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "image"
   }, {
     "id" : "fb68ac4f-271b-c536-a151-538c8f5e70dd",
     "name" : "image",
-    "display_width" : null,
     "label" : "Image",
     "required" : false,
     "locked" : false,
@@ -288,6 +305,7 @@
     "resizable" : false,
     "show_loading" : false,
     "type" : "image",
+    "display_width" : null,
     "default" : {
       "size_type" : "auto",
       "src" : "",
@@ -297,13 +315,13 @@
   }, {
     "id" : "f36d2d02-1a6f-150b-02d8-c7a2161d68ef",
     "name" : "teaser_tab_link",
-    "display_width" : null,
     "label" : "Teaser Tab Link",
     "required" : false,
     "locked" : false,
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
     "show_advanced_rel_options" : true,
     "type" : "link",
+    "display_width" : null,
     "default" : {
       "url" : {
         "content_id" : 98005608668,
@@ -318,6 +336,7 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "teaser_tab_text" : "Wanna see something fun?",
     "type" : "image",

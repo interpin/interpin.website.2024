@@ -118,4 +118,67 @@
       }
     }
   });
+  
+  // SVGs Load On View
+  domReady(() => {
+    
+    // Constant for the delay before SVG loads
+    const delay = 10;
+
+    // Function to check if an element is completely in view
+    function isInView(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+    
+    // Get all elements with the class 'svg_load_on_scroll'
+    const elements = document.querySelectorAll('.svg_load_on_scroll');
+
+    // Loop over each element
+    elements.forEach(element => {
+      
+      const computedStyle = window.getComputedStyle(element);
+      // Get the background image URL
+      const backgroundImage = computedStyle.getPropertyValue('background-image');
+
+      // Check if the background image is a valid SVG URL
+      if (backgroundImage && backgroundImage.includes('.svg')) {
+        // Remove the url() part to get the clean URL
+        const svgUrl = backgroundImage.slice(5, -2);
+        // Set the SVG URL as a data attribute
+        element.setAttribute('data-svg-background', svgUrl);
+
+        // Remove the current background image
+        element.style.backgroundImage = 'none';
+        
+        // Add a scroll event listener to the document
+        document.addEventListener('scroll', function onScroll() {
+          
+          // Check if the element is completely in view
+          if (isInView(element)) {
+            // Remove the scroll event listener
+            document.removeEventListener('scroll', onScroll);
+            // Wait for the specified delay, then restore the background image
+            setTimeout(() => {
+              const svgBackground = element.getAttribute('data-svg-background');
+              element.style.backgroundImage = `url(${svgBackground}?_rf=refresh)`;
+              // Force reflow/repaint to ensure animation starts
+              element.style.display = 'none';
+              // Trigger reflow
+              element.offsetHeight; // No need to store this value, it forces reflow
+              // Re-display element
+              element.style.display = '';
+            }, delay);
+          }
+        });
+      }
+    });
+    
+  });
+    
 })();

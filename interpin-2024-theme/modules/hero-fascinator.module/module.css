@@ -134,6 +134,26 @@
     min-width: 100%;
 }
 
+/* Fascintaor Video */
+.hero-interactive--container .fascinator-video{
+  overflow: hidden;
+  max-height: 100%;
+}
+.hero-interactive--container .fascinator-video .hs-video-widget{
+}
+.hero-interactive--container .fascinator-video .hs-video-widget .hs-video-container{
+}
+.hero-interactive--container .fascinator-video .hs-video-widget .hs-video-container .hs-video-wrapper{
+  height: auto !important;  
+  padding-bottom: 100% !important;
+  min-height: 100vh;
+  min-width: 142%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.hero-interactive--container .fascinator-video .hs-video-widget .hs-video-container .hs-video-wrapper iframe{
+}
+
 /* Fascinator Tablet Fallback */
 .hero-interactive--container .fascinator-container--tablet{
   display: none;

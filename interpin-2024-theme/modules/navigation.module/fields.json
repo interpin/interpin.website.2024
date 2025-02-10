@@ -1,20 +1,20 @@
 [ {
   "id" : "3fe74785-c9ee-1385-8361-57dfe98c1118",
   "name" : "navigation_menu",
-  "display_width" : null,
   "label" : "Navigation Menu",
   "required" : false,
   "locked" : true,
   "type" : "simplemenu",
+  "display_width" : null,
   "default" : [ ]
 }, {
   "id" : "362b0fd3-c5b7-38d9-17e7-07c2ec29e439",
   "name" : "hide_menu",
-  "display_width" : null,
   "label" : "Hide Menu",
   "required" : false,
   "locked" : true,
   "display" : "toggle",
   "type" : "boolean",
+  "display_width" : null,
   "default" : false
 } ]
